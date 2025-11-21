@@ -29,83 +29,306 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS
+# Custom CSS - Modern Professional Design
 st.markdown(f"""
 <style>
-    /* Color Scheme */
+    /* ============================================================
+       DESIGN SYSTEM - Modern Professional Theme
+       ============================================================ */
+
+    /* Smooth Scroll & Base Animations */
+    html {{
+        scroll-behavior: smooth;
+    }}
+
+    * {{
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }}
+
+    /* Color Palette */
     :root {{
         --primary-blue: {COLORS['primary_blue']};
         --accent-teal: {COLORS['accent_teal']};
         --success-green: {COLORS['success_green']};
         --warning-amber: {COLORS['warning_amber']};
         --alert-red: {COLORS['alert_red']};
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
     }}
 
-    /* Headers */
+    /* ============================================================
+       TYPOGRAPHY - Professional Hierarchy
+       ============================================================ */
+
     .main h1 {{
         color: {COLORS['primary_blue']};
         font-weight: 700;
+        font-size: 2.5rem;
+        letter-spacing: -0.02em;
         border-bottom: 3px solid {COLORS['accent_teal']};
-        padding-bottom: 10px;
+        padding-bottom: 12px;
+        margin-bottom: 1.5rem;
+        animation: fadeInDown 0.6s ease-out;
     }}
 
     .main h2 {{
         color: {COLORS['primary_blue']};
         font-weight: 600;
-        margin-top: 30px;
+        font-size: 1.875rem;
+        letter-spacing: -0.01em;
+        margin-top: 2.5rem;
+        margin-bottom: 1.25rem;
+        animation: fadeInLeft 0.5s ease-out;
     }}
 
-    /* Framework Table */
+    .main h3 {{
+        color: #2c3e50;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        animation: fadeIn 0.5s ease-out;
+    }}
+
+    /* ============================================================
+       CARDS & CONTAINERS - Modern Depth
+       ============================================================ */
+
+    /* Framework Table Container */
     .framework-table {{
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        padding: 20px;
-        border-radius: 10px;
-        border-left: 5px solid {COLORS['accent_teal']};
-        margin: 20px 0;
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 16px;
+        border: 1px solid rgba(0, 102, 204, 0.1);
+        box-shadow: var(--shadow-sm);
+        margin: 24px 0;
+        animation: fadeInUp 0.6s ease-out;
     }}
 
-    /* Metric Cards */
+    .framework-table:hover {{
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+    }}
+
+    /* Metric Cards - Enhanced Design */
     div[data-testid="metric-container"] {{
-        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #e8eaf0;
+        box-shadow: var(--shadow-sm);
+        animation: fadeInUp 0.5s ease-out;
     }}
 
-    /* Sidebar */
+    div[data-testid="metric-container"]:hover {{
+        box-shadow: var(--shadow-md);
+        transform: translateY(-3px);
+        border-color: {COLORS['accent_teal']};
+    }}
+
+    /* Data Tables - Modern Look */
+    div[data-testid="stDataFrame"] {{
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        animation: fadeIn 0.6s ease-out;
+    }}
+
+    div[data-testid="stDataFrame"]:hover {{
+        box-shadow: var(--shadow-md);
+    }}
+
+    /* ============================================================
+       SIDEBAR - Professional Navigation
+       ============================================================ */
+
     section[data-testid="stSidebar"] {{
-        background: linear-gradient(180deg, {COLORS['primary_blue']} 0%, #1a4d7a 100%);
+        background: linear-gradient(180deg, {COLORS['primary_blue']} 0%, #0a3d5c 100%);
+        box-shadow: 2px 0 16px rgba(0, 0, 0, 0.1);
     }}
 
     section[data-testid="stSidebar"] .stMarkdown {{
         color: white;
+        animation: fadeIn 0.5s ease-out;
     }}
+
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3 {{
+        color: white !important;
+    }}
+
+    /* Sidebar Hover Effects */
+    section[data-testid="stSidebar"] .stMarkdown:hover {{
+        opacity: 0.9;
+    }}
+
+    /* ============================================================
+       CONTENT BOXES - Refined Design
+       ============================================================ */
 
     /* Quote Boxes */
     .quote-box {{
-        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-        padding: 20px;
-        border-radius: 10px;
-        border-left: 5px solid {COLORS['primary_blue']};
-        margin: 15px 0;
+        background: linear-gradient(135deg, rgba(227, 242, 253, 0.6) 0%, rgba(187, 222, 251, 0.8) 100%);
+        backdrop-filter: blur(10px);
+        padding: 24px;
+        border-radius: 12px;
+        border-left: 4px solid {COLORS['primary_blue']};
+        border-right: 1px solid rgba(0, 102, 204, 0.1);
+        border-top: 1px solid rgba(0, 102, 204, 0.1);
+        border-bottom: 1px solid rgba(0, 102, 204, 0.1);
+        margin: 20px 0;
         font-style: italic;
         color: #1a1a1a;
+        box-shadow: var(--shadow-sm);
+        animation: fadeInUp 0.5s ease-out;
+    }}
+
+    .quote-box:hover {{
+        box-shadow: var(--shadow-md);
+        transform: translateX(4px);
+        border-left-width: 6px;
     }}
 
     .quote-box strong {{
         color: {COLORS['primary_blue']};
         font-size: 1.1em;
+        font-weight: 700;
+        letter-spacing: 0.01em;
     }}
 
     /* Data Quality Badge */
     .quality-badge {{
         display: inline-block;
-        background: {COLORS['success_green']};
+        background: linear-gradient(135deg, {COLORS['success_green']} 0%, #1e7e34 100%);
         color: white;
-        padding: 5px 15px;
-        border-radius: 20px;
+        padding: 8px 20px;
+        border-radius: 24px;
         font-weight: 600;
         font-size: 0.9em;
+        box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+        animation: fadeIn 0.6s ease-out;
+    }}
+
+    .quality-badge:hover {{
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+    }}
+
+    /* ============================================================
+       BUTTONS & INTERACTIVE ELEMENTS
+       ============================================================ */
+
+    button[kind="primary"] {{
+        background: linear-gradient(135deg, {COLORS['primary_blue']} 0%, #004d99 100%);
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-weight: 600;
+        box-shadow: var(--shadow-sm);
+    }}
+
+    button[kind="primary"]:hover {{
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+    }}
+
+    /* Expander Styling */
+    div[data-testid="stExpander"] {{
+        background: #ffffff;
+        border: 1px solid #e8eaf0;
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        margin: 16px 0;
+    }}
+
+    div[data-testid="stExpander"]:hover {{
+        box-shadow: var(--shadow-md);
+        border-color: {COLORS['accent_teal']};
+    }}
+
+    /* ============================================================
+       ANIMATIONS - Subtle & Professional
+       ============================================================ */
+
+    @keyframes fadeIn {{
+        from {{
+            opacity: 0;
+        }}
+        to {{
+            opacity: 1;
+        }}
+    }}
+
+    @keyframes fadeInUp {{
+        from {{
+            opacity: 0;
+            transform: translateY(20px);
+        }}
+        to {{
+            opacity: 1;
+            transform: translateY(0);
+        }}
+    }}
+
+    @keyframes fadeInDown {{
+        from {{
+            opacity: 0;
+            transform: translateY(-20px);
+        }}
+        to {{
+            opacity: 1;
+            transform: translateY(0);
+        }}
+    }}
+
+    @keyframes fadeInLeft {{
+        from {{
+            opacity: 0;
+            transform: translateX(-20px);
+        }}
+        to {{
+            opacity: 1;
+            transform: translateX(0);
+        }}
+    }}
+
+    /* ============================================================
+       RESPONSIVE POLISH
+       ============================================================ */
+
+    /* Smooth Focus States */
+    *:focus {{
+        outline: 2px solid {COLORS['accent_teal']};
+        outline-offset: 2px;
+    }}
+
+    /* Link Styling */
+    a {{
+        color: {COLORS['primary_blue']};
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px solid transparent;
+    }}
+
+    a:hover {{
+        border-bottom-color: {COLORS['primary_blue']};
+        opacity: 0.8;
+    }}
+
+    /* Column Gap Refinement */
+    div[data-testid="column"] {{
+        padding: 8px;
+    }}
+
+    /* Tabs Modern Look */
+    button[data-baseweb="tab"] {{
+        border-radius: 8px 8px 0 0;
+        font-weight: 600;
+    }}
+
+    button[data-baseweb="tab"]:hover {{
+        background: rgba(0, 102, 204, 0.05);
     }}
 </style>
 """, unsafe_allow_html=True)
@@ -145,6 +368,20 @@ with st.sidebar:
 # ============================================================================
 # MAIN CONTENT - EXECUTIVE CONTEXT
 # ============================================================================
+
+# Top Left Badge
+st.markdown("""
+<div style='position: fixed; top: 80px; left: 20px; z-index: 999;
+            background: linear-gradient(135deg, #0066CC 0%, #00C9A7 100%);
+            padding: 12px 24px; border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 102, 204, 0.3);
+            animation: fadeInLeft 0.8s ease-out;'>
+    <p style='margin: 0; color: white; font-weight: 800; font-size: 1.1rem;
+              letter-spacing: 0.03em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);'>
+        🔥 Who let this guy cook??
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 # Hero Section
 st.markdown("# 🎯 Extended Reality (XR) Technology Readiness")
