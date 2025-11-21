@@ -89,6 +89,12 @@ st.markdown(f"""
         border-left: 5px solid {COLORS['primary_blue']};
         margin: 15px 0;
         font-style: italic;
+        color: #1a1a1a;
+    }}
+
+    .quote-box strong {{
+        color: {COLORS['primary_blue']};
+        font-size: 1.1em;
     }}
 
     /* Data Quality Badge */
@@ -306,7 +312,7 @@ for dim in ALL_DIMENSIONS:
         "Dimension": f"{dim.icon} {dim.name}",
         "Entries": f"{dim.entry_count:,}",
         "Sources": len(dim.get_source_paths()),
-        "Readiness": f"{dim.readiness_score}%",
+        "Readiness": dim.readiness_score,  # Numeric value for progress bar
         "Status": dim.readiness_color,
         "Key Finding": dim.key_finding
     })
@@ -323,7 +329,7 @@ st.dataframe(
         "Sources": st.column_config.TextColumn("Source Files", width="small"),
         "Readiness": st.column_config.ProgressColumn(
             "Readiness",
-            format="%s",
+            format="%d%%",  # Display as percentage
             min_value=0,
             max_value=100
         ),
