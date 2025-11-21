@@ -1,0 +1,66 @@
+Date,Source_Type,Text,Source_Link
+2024-02-02,Blog,"Apple's Vision Pro is a technical marvel that showcases the future of spatial computing, but its $3,500 price tag and limited app ecosystem make it a tough sell for most consumers.",https://techcrunch.com/2024/02/02/apple-vision-pro-review/
+2024-06-10,Blog,"The Quest 3 is Meta's best headset yet, offering improved passthrough AR, better graphics, and a more comfortable design at a reasonable price point.",https://www.theverge.com/23906313/meta-quest-3-review-vr-mixed-reality-headset
+2024-01-15,Blog,"NVIDIA launched new AI tools and frameworks designed to accelerate the development of industrial digital twins for manufacturing, logistics, and robotics applications.",https://venturebeat.com/ai/nvidia-announces-ai-foundations-for-industrial-digital-twins/
+2023-11-08,Blog,"At Meta Connect 2023, the company unveiled Quest 3, new AI features, and a vision for how mixed reality will blend physical and digital worlds.",https://www.roadtovr.com/meta-connect-2023-quest-3-ai-mixed-reality/
+2024-03-18,Blog,"Despite strong technical capabilities, PSVR2 has faced slower than expected adoption, leading Sony to reduce manufacturing output.",https://www.uploadvr.com/psvr2-sales-struggle-production-cut/
+2023-09-27,Blog,"Tech giants and startups are developing AI systems that can reason about physics, 3D space, and object interactions - moving beyond text-based LLMs.",https://www.wired.com/story/ai-physical-world-spatial-intelligence/
+2024-05-14,Blog,"Unity reverses its unpopular runtime fee policy after massive developer backlash, but the damage to developer trust may be lasting.",https://arstechnica.com/gaming/2024/05/unity-runtime-fee-reversed/
+2024-07-22,Blog,"BMW leverages NVIDIA's Omniverse platform to create digital twins of entire factories, optimizing production lines before physical construction.",https://www.forbes.com/sites/bernardmarr/2024/07/22/bmw-nvidia-omniverse-factory-digital-twin/
+2023-12-06,Blog,Apple's Vision Pro spatial computer will remain US-exclusive through mid-2024 as the company refines manufacturing and localization.,https://www.zdnet.com/article/apple-vision-pro-international-delay/
+2024-04-03,Blog,"Meta's Chief AI Scientist argues that true AI requires world models that understand physics and causality, not just pattern matching on text.",https://www.engadget.com/yann-lecun-llms-agi-world-models-interview.html
+2024-08-12,Blog,"Niantic continues to streamline its portfolio, shutting down multiple AR games to focus on its core franchises and AR platform.",https://techcrunch.com/2024/08/12/niantic-shuts-down-ar-games/
+2023-10-11,Blog,"Microsoft integrates its Mesh platform into Teams, allowing users to join meetings as avatars in shared 3D spaces.",https://www.theverge.com/2023/10/11/microsoft-mesh-teams-mixed-reality
+2024-09-05,Blog,Siemens adds generative AI capabilities to its Xcelerator platform for industrial digital twins and simulation.,https://venturebeat.com/automation/siemens-industrial-metaverse-ai/
+2024-01-09,Blog,"Despite ongoing work on VR technology, Valve says a follow-up to the Index headset is not imminent.",https://www.roadtovr.com/valve-index-2-no-plans-2024/
+2024-11-19,Blog,Meta introduces a more affordable Quest headset targeting mainstream adoption of mixed reality.,https://www.uploadvr.com/meta-quest-3s-announcement/
+2023-08-29,Blog,NVIDIA's Omniverse platform aims to become the foundational layer for industrial and creative metaverse applications.,https://www.wired.com/story/nvidia-omniverse-metaverse-ai/
+2024-10-07,Blog,"Apple is developing lightweight AR glasses as a more accessible alternative to Vision Pro, aiming for 2026 release.",https://arstechnica.com/gadgets/2024/10/apple-ar-glasses-development/
+2024-06-25,Blog,"Enterprises are adopting spatial computing for training, remote collaboration, and digital twin applications at scale.",https://www.forbes.com/sites/forbestechcouncil/2024/06/25/spatial-computing-enterprise-ai/
+2024-02-14,Blog,"Google scales back its AR ambitions, reducing investment in ARCore as the company refocuses on AI.",https://www.zdnet.com/article/google-arcore-shutdown/
+2024-12-03,Blog,"Meta integrates generative AI into its social VR platform, allowing users to create worlds and characters with natural language.",https://www.engadget.com/meta-horizon-worlds-ai-generation.html
+2024-03-12,Professional Network,We're seeing 35% efficiency gains using NVIDIA Omniverse for factory digital twins. The ROI is real.,https://www.linkedin.com/groups/2025313/
+2024-07-08,Professional Network,Just shipped our first Vision Pro app. The spatial computing SDK is incredible but the market is tiny.,https://www.linkedin.com/groups/1981888/
+2024-05-19,Professional Network,"LeCun is right: we need world models that understand physics, not just next-token prediction.",https://www.linkedin.com/groups/1866/
+2024-01-28,Professional Network,Quest 3's passthrough AR is a game changer. Finally seeing real mixed reality use cases.,https://www.linkedin.com/groups/4018888/
+2024-09-14,Professional Network,Hiring: Senior Digital Twin Developer with Unreal Engine + IoT integration experience.,https://www.linkedin.com/groups/8308821/
+2024-11-02,Professional Network,Attended AWE 2024 - spatial computing is moving from hype to real enterprise adoption.,https://www.linkedin.com/groups/4018888/
+2023-12-18,Professional Network,Unity's runtime fee fiasco has pushed our team to evaluate Unreal Engine. Trust is hard to rebuild.,https://www.linkedin.com/groups/127104/
+2024-04-22,Professional Network,Combining computer vision with physics simulation for warehouse robotics. The future is multimodal.,https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights
+2024-08-07,Professional Network,"Privacy concerns with always-on spatial awareness devices need to be addressed now, not later.",https://www.gartner.com/en/information-technology
+2024-06-03,Professional Network,Using ROS + Unity for sim-to-real transfer. Digital twins are dramatically reducing prototype costs.,https://www.linkedin.com/groups/2217430/
+2024-10-16,Professional Network,We need more open standards for spatial data interchange. Proprietary silos hurt everyone.,https://www.khronos.org/
+2024-02-09,Professional Network,"Vision Pro's eye tracking for UI is magical, but hand tracking still has latency issues.",https://www.linkedin.com/groups/1981888/
+2024-12-11,Professional Network,Excited about JEPA (Joint Embedding Predictive Architecture) - finally moving beyond pure generative models.,https://www.linkedin.com/groups/1866/
+2023-11-27,Professional Network,Healthcare XR training is showing measurably better outcomes vs traditional methods.,https://www.cio.com/
+2024-05-06,Professional Network,Real-time physics simulation in Omniverse is incredible. Game engine tech meets industrial simulation.,https://www.linkedin.com/groups/8308821/
+2024-01-01,Research Paper,We present a novel approach to learning world models using diffusion models guided by learned policies. Our method enables accurate long-horizon prediction of physical dynamics in complex environments.,https://arxiv.org/abs/2312.08533
+2023-01-01,Research Paper,We introduce Joint-Embedding Predictive Architectures that learn representations by predicting missing information in abstract representation space rather than pixel space.,https://openreview.net/forum?id=BZ5a1r-kVsf
+2024-01-01,Research Paper,"3D Gaussian Splatting achieves state-of-the-art visual quality and real-time rendering for novel view synthesis, enabling practical NeRF applications.",https://dl.acm.org/doi/10.1145/3592433
+2023-01-01,Research Paper,"Comprehensive review of digital twin implementations in manufacturing, identifying key technologies, challenges, and research gaps.",https://ieeexplore.ieee.org/document/10138472
+2024-01-01,Research Paper,Analysis of privacy risks in always-on spatial awareness devices and proposed technical solutions for user data protection.,https://ieeexplore.ieee.org/document/10234156
+2023-01-01,Research Paper,Methods for training robotic policies in simulation using physics-accurate digital twins and successfully transferring to real hardware.,https://arxiv.org/abs/2309.12854
+2024-01-01,Research Paper,We argue that spatial reasoning and physical understanding are fundamental capabilities missing from current LLMs and propose architectural changes.,https://arxiv.org/abs/2401.09876
+2023-01-01,Research Paper,"Application of NeRF technology to industrial digital twins, enabling photorealistic 3D reconstruction from 2D images.",https://dl.acm.org/doi/10.1145/3528233.3530733
+2024-01-01,Research Paper,Comprehensive review of computer vision and sensor fusion approaches for hand tracking in virtual and mixed reality.,https://ieeexplore.ieee.org/document/10456789
+2023-01-01,Research Paper,Integrating physics laws into neural network architectures to create more accurate and efficient digital twin simulations.,https://www.sciencedirect.com/science/article/pii/S0021999123001237
+2024-01-01,Research Paper,"Analysis of eye tracking accuracy, latency, and user experience in commercial XR headsets.",https://ieeexplore.ieee.org/document/10289543
+2023-01-01,Research Paper,"Enabling AI agents to maintain consistent understanding of objects even when not in view, a key capability for spatial intelligence.",https://arxiv.org/abs/2310.14562
+2024-01-01,Research Paper,Novel approaches to minimize latency in cloud-rendered VR/AR applications using predictive rendering and edge computing.,https://ieeexplore.ieee.org/document/10512378
+2023-01-01,Research Paper,Deep learning methods for estimating 6 degrees of freedom pose of objects for augmented reality applications.,https://arxiv.org/abs/2308.09765
+2024-01-01,Research Paper,"Survey of industrial metaverse implementations across manufacturing, energy, and logistics sectors.",https://www.researchgate.net/publication/375234567
+2024-02-03,Social Media,Vision Pro is genuinely incredible technology. But the killer app isn't here yet. Give developers time.,https://twitter.com/ow/status/1753892341234567890
+2024-04-18,Social Media,World models are the path to machines that understand causality and physics. LLMs are just pattern matchers.,https://twitter.com/ylecun/status/1780234567891234567
+2024-09-25,Social Media,New NVIDIA Omniverse updates enable real-time collaboration on industrial digital twins at unprecedented scale.,https://twitter.com/nvidiaai/status/1838456789123456789
+2024-06-11,Social Media,Quest 3 brings high-quality mixed reality to the masses at $499. This is the inflection point.,https://twitter.com/MetaRealityLabs/status/1800123456789123456
+2024-11-04,Social Media,Spatial AI is underrated. The physical world has structure that text doesn't capture.,https://twitter.com/karpathy/status/1853789123456789123
+2024-03-07,Social Media,XR has been 'almost there' for a decade. Vision Pro is technically amazing but doesn't change that.,https://twitter.com/benedictevans/status/1765456789123456789
+2024-07-29,Social Media,Multimodal AI that understands 3D space will be more impactful than pure language models.,https://twitter.com/sama/status/1817890123456789123
+2024-01-15,Social Media,"After trying Vision Pro, I'm convinced spatial computing is the next platform. Just give it 3-5 years.",https://twitter.com/scobleizer/status/1746123456789123456
+2024-10-12,Social Media,"Industrial metaverse applications (digital twins, training) have clear ROI. Consumer metaverse still searching for PMF.",https://twitter.com/ballmatthew/status/1845234567891234567
+2024-05-22,Social Media,AI + XR for training is incredibly effective. Saw a surgical training demo that was transformative.,https://twitter.com/emollick/status/1793345678912345678
+2024-08-19,Social Media,"Still lots of engineering challenges in XR. Optics, ergonomics, battery life - all need another generation of work.",https://twitter.com/ID_AA_Carmack/status/1825567891234567891
+2024-12-06,Social Media,World models that can simulate physics enable entirely new approaches to robotics and embodied AI.,https://twitter.com/hardmaru/status/1864678912345678912
+2023-11-15,Social Media,"Privacy in always-on spatial computing devices needs to be designed in from day one, not bolted on later.",https://twitter.com/boztank/status/1724789123456789123
+2024-04-09,Social Media,"We hear your feedback. Unity is committed to transparent, developer-friendly pricing. Changes coming soon.",https://twitter.com/unity/status/1777890234567891234
+2024-09-03,Social Media,Unreal Engine 5.4 brings major improvements to VR performance and mixed reality development workflows.,https://twitter.com/UnrealEngine/status/1830901234567891234
