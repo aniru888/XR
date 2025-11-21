@@ -1,10 +1,66 @@
-1. arXiv: Artificial Intelligence (cs.AI) - https://arxiv.org/list/cs.AI/recent
-2. arXiv: Computer Vision (cs.CV) - https://arxiv.org/list/cs.CV/recent
-3. IEEE Xplore Search: Spatial Computing - https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=%22Spatial%20Computing%22
-4. ACM Digital Library - https://dl.acm.org/
-5. Google Scholar - https://scholar.google.com/
-6. Papers with Code - https://paperswithcode.com/
-7. ResearchGate - https://www.researchgate.net/
-8. ScienceDirect - https://www.sciencedirect.com/
-9. SpringerLink - https://link.springer.com/
-10. Semantic Scholar - https://www.semanticscholar.org/
+REAL RESEARCH SOURCES FOR XR/AR/VR/SPATIAL COMPUTING
+
+All sources below are VERIFIED and REAL academic/research repositories:
+
+1. arXiv (Computer Science - AI)
+   URL: https://arxiv.org/list/cs.AI/recent
+   Focus: AI research, world models, spatial intelligence preprints
+
+2. arXiv (Computer Science - Computer Vision)
+   URL: https://arxiv.org/list/cs.CV/recent
+   Focus: Computer vision, 3D reconstruction, visual AI
+
+3. IEEE Xplore Digital Library
+   URL: https://ieeexplore.ieee.org/
+   Focus: Engineering and computer science research papers
+   Coverage: Spatial computing, XR, robotics, digital twins
+
+4. ACM Digital Library
+   URL: https://dl.acm.org/
+   Focus: Computing research and publications
+   Coverage: Graphics, HCI, VR/AR systems
+
+5. Google Scholar
+   URL: https://scholar.google.com/
+   Focus: Academic search engine across all disciplines
+   Coverage: Comprehensive XR and spatial computing research
+
+6. Papers with Code
+   URL: https://paperswithcode.com/
+   Focus: Machine learning papers with code implementations
+   Coverage: AI, computer vision, world models
+
+7. ResearchGate
+   URL: https://www.researchgate.net/
+   Focus: Academic social network and paper repository
+   Coverage: Multi-disciplinary research including XR
+
+8. ScienceDirect
+   URL: https://www.sciencedirect.com/
+   Focus: Peer-reviewed journal articles (Elsevier)
+   Coverage: Engineering, computer science, applied sciences
+
+9. OpenReview
+   URL: https://openreview.net/
+   Focus: Open peer review platform
+   Coverage: Machine learning conferences (ICLR, NeurIPS, etc.)
+
+10. SpringerLink
+    URL: https://link.springer.com/
+    Focus: Academic journals and books
+    Coverage: Computer science, engineering, AI
+
+KEY RESEARCH TOPICS COVERED:
+- World Models and JEPA (Joint-Embedding Predictive Architecture)
+- Gaussian Splatting and Neural Radiance Fields (NeRF)
+- Digital Twin technologies and implementations
+- Spatial computing and spatial intelligence
+- Physics-Informed Neural Networks (PINNs)
+- Sim-to-Real transfer for robotics
+- Hand tracking and eye tracking for XR
+- 6DOF pose estimation for AR
+- Privacy in spatial computing devices
+- Industrial metaverse applications
+
+These sources provide access to cutting-edge research in XR, AR, VR,
+spatial computing, AI, and related fields.
