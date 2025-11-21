@@ -39,6 +39,7 @@ st.markdown("""
         padding: 1.5rem;
         border-radius: 0.5rem;
         margin: 0.5rem 0;
+        border: 1px solid #d0d0d0;
     }
     .insight-box {
         background-color: #e8f4f8;
@@ -46,6 +47,19 @@ st.markdown("""
         border-left: 4px solid #1f77b4;
         margin: 1rem 0;
         border-radius: 0.3rem;
+        border: 1px solid #b8d4e0;
+        color: #1a1a1a;
+    }
+    .insight-box h3, .insight-box h4 {
+        color: #0d47a1;
+        margin-top: 0;
+    }
+    .insight-box p, .insight-box li {
+        color: #2c3e50;
+        line-height: 1.6;
+    }
+    .insight-box strong {
+        color: #1565c0;
     }
 </style>
 """, unsafe_allow_html=True)
