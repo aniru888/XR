@@ -1,50 +1,40 @@
-sentence,neg,neu,pos,compound,label
-"Raw Collected Text (XR: Present State of Maturity)
-
-SOURCE: xrinsightslab.com/xr-adoption-2025
-""Extended Reality technologies have moved beyond experimentation and are now being incorporated into structured pilot programs across major industries.",0.0,,1.0,0.6,positive
-"Organizations are increasingly recognizing XR's value in operational efficiency, training enhancement, and workflow augmentation.",0.0,,0.0,0.0,neutral
-"The maturity of XR deployment varies widely, with manufacturing, healthcare, and enterprise training emerging as frontrunner sectors due to strong measurable ROI and clearer implementation pathways.",0.0,,1.0,0.6,positive
-"A key development in the present maturity of XR is the shift from standalone immersive tools to integrated XR ecosystems supported by cloud rendering, device interoperability improvements, and AI-driven content automation.",0.0,,4.0,0.6,positive
-"However, the report highlights that while XR is maturing rapidly, large-scale enterprise adoption remains constrained by hardware costs, a shortage of specialized developers, and uneven digital infrastructure readiness.""
-
-SOURCE: industrytechreview.com/enterprise-xr-maturity
-""Enterprise XR adoption is entering a new phase characterized by formalization of use cases rather than experimentation.",2.0,,1.0,-0.6,negative
-Organizations that once treated XR as an emerging technology are now treating it as a standardized part of training and simulation workflows.,0.0,,0.0,0.0,neutral
-"Surveyed enterprise leaders report that XR solutions are proving especially effective in scenarios requiring high information density, such as technical maintenance guidance, worker onboarding, and industrial safety compliance.",0.0,,0.0,0.0,neutral
-"The maturity of XR technology is supported by improved device reliability, better environmental tracking, and the introduction of cross-platform XR frameworks.",0.0,,3.0,0.6,positive
-Yet challenges persist: enterprises cite integration with existing IT systems and measuring long-term impact as key obstacles.,2.0,,0.0,-0.6,negative
-"In this stage of maturity, XR is considered stable enough for operational use but still evolving toward full ecosystem standardization.""
-
-SOURCE: arxiv.org/abs/2501.01922
-""In assessing the technological maturity of XR systems, this study identifies several indicators suggesting that XR has progressed from experimental deployments into practical applied contexts.",0.0,,2.0,0.6,positive
-"Results from multi-institutional evaluations show that XR systems demonstrate sufficient stability for controlled training environments, particularly in healthcare simulations and engineering design tasks.",0.0,,0.0,0.0,neutral
-"However, the study also notes that reproducibility across contexts remains a limiting factor, largely due to variability in tracking systems, hardware performance, and environmental calibration.",0.0,,0.0,0.0,neutral
-"The findings indicate that XR maturity is inconsistent: while some domains achieve near-production reliability, others face systemic constraints requiring further research.",0.0,,1.0,0.6,positive
-"The authors emphasize the need for larger datasets and standardized evaluation benchmarks to strengthen XR system robustness, a necessary step in advancing XR from early-stage maturity toward fully validated real-world deployment.""
-
-SOURCE: ieeevr.org/2025/program/research
-""Recent research presented at IEEE VR 2025 reflects rapid progress in XR system performance, interaction models, and rendering optimization.",0.0,,2.0,0.6,positive
-"Several studies demonstrate improved passthrough mixed reality quality, reduced motion latency, and more accurate occlusion handling, all of which contribute to XR's current maturity trajectory.",0.0,,2.0,0.6,positive
-"Research prototypes showcased at the conference illustrate that XR technologies are moving closer to real-world applicability, supported by advancements in haptics, AI-driven spatial understanding, and lightweight rendering pipelines.",0.0,,2.0,0.6,positive
-"Despite these improvements, multiple papers highlight persistent issues related to device ergonomics, prolonged-use comfort, and environmental variability.",0.0,,2.0,0.6,positive
-"The conference consensus suggests that XR is in a state of advancing maturity: capable of supporting demanding tasks in controlled conditions but requiring more refinement for unreliable or dynamic environments.""
-
-SOURCE: linkedin.com/posts/xr-hardware-status-2025
-""XR hardware has reached a point where devices can support 30-minute to one-hour sessions without significant discomfort.",0.0,,4.0,0.6,positive
-"Manufacturers have improved thermal performance, display clarity, and tracking stability, which contributes to the present maturity of XR devices.",0.0,,2.0,0.6,positive
-"Nevertheless, the post notes that enterprise users still report concerns about battery life, device weight during extended sessions, and the cost of adopting newer generation hardware.",3.0,,0.0,-0.6,negative
-"Overall, the author concludes that XR hardware is entering a reliable stage of maturity but has not yet achieved mainstream comfort standards.""
-
-SOURCE: linkedin.com/pulse/xr-maturity-2025-analysis
-""XR is transitioning from early adoption into structured enterprise integration.",0.0,,2.0,0.6,positive
-Use cases that once required extensive configuration now operate reliably through standardized software workflows.,0.0,,0.0,0.0,neutral
-The maturity of XR is most visible in the rise of specialized deployment teams within enterprises and the emergence of XR centers of excellence.,0.0,,1.0,0.6,positive
-"However, the author stresses that differing platform ecosystems and inconsistent developer tooling continue to slow XR's progression toward full enterprise-wide adoption.",0.0,,0.0,0.0,neutral
-"The post concludes that XR has reached an early-scale maturity phase: reliable enough for operational integration in certain business units, but still evolving toward broad organizational adoption.""
-
-SOURCE: businessforum.meta.com/xr-maturity-discussions
-""Users report that XR systems used in enterprise training exhibit stable performance and predictable behavior during guided support scenarios.",0.0,,4.0,0.6,positive
-"Common observations include improved hand-tracking fidelity, more accurate room-scale mapping, and greater consistency in passthrough mixed-reality rendering.",0.0,,1.0,0.6,positive
-"Despite these advancements, contributors point out that adoption barriers remain, including limited compatibility across hardware generations, high total cost of ownership, and a shortage of XR-trained technicians.",4.0,,1.0,-0.6,negative
-"The forum consensus is that XR has reached a dependable level of maturity for specific structured workflows but still lacks seamless integration across broader enterprise ecosystems.""",1.0,,1.0,0.0,neutral
+sentence,compound,pos,neu,neg,label
+"Raw Collected Text (XR: Present State of Maturity) ""Extended Reality technologies have moved beyond ",0.0,0.0,1.0,0.0,neutral
+"Organizations are increasingly recognizing XR's value in operational efficiency, training enhancemen",0.5994,0.29,0.71,0.0,positive
+"The maturity of XR deployment varies widely, with manufacturing, healthcare, and enterprise training",0.5106,0.117,0.883,0.0,positive
+A key development in the present maturity of XR is the shift from standalone immersive tools to inte,0.5574,0.137,0.863,0.0,positive
+"However, the report highlights that while XR is maturing rapidly, large-scale enterprise adoption re",-0.1027,0.066,0.822,0.112,negative
+""" ""Enterprise XR adoption is entering a new phase characterized by formalization of use cases rather",0.0,0.0,1.0,0.0,neutral
+"More than half (55%) of respondents are currently deploying XR in their organization, and among thos",0.0,0.0,1.0,0.0,neutral
+Surveyed enterprise leaders report that XR solutions are proving especially effective in scenarios r,0.7841,0.24,0.76,0.0,positive
+"The maturity of XR technology is supported by improved device reliability, better environmental trac",0.8074,0.316,0.684,0.0,positive
+"Yet challenges persist: respondents identified investment risk (58%), problems integrating with exis",-0.7003,0.097,0.656,0.247,negative
+"In this stage of maturity, XR is considered stable enough for operational use but still evolving tow",0.1531,0.078,0.922,0.0,positive
+""" ""In assessing the technological maturity of XR systems, this study identifies several indicators s",0.0,0.0,1.0,0.0,neutral
+Results from multi-institutional evaluations show that XR systems demonstrate sufficient stability f,0.0,0.0,1.0,0.0,neutral
+"However, the study also notes that reproducibility across contexts remains a limiting factor, largel",0.0,0.0,1.0,0.0,neutral
+The findings indicate that XR maturity is inconsistent: while some domains achieve near-production r,0.0,0.0,1.0,0.0,neutral
+The authors emphasize the need for larger datasets and standardized evaluation benchmarks to strengt,0.5413,0.134,0.866,0.0,positive
+""" ""The IEEE VR 2024 conference held March 16-21, 2024 in Orlando reflects rapid progress in XR syste",0.6597,0.197,0.803,0.0,positive
+"Several studies demonstrate improved passthrough mixed reality quality, reduced motion latency, and ",0.4767,0.114,0.886,0.0,positive
+Research prototypes showcased at the conference illustrate that XR technologies are moving closer to,0.3182,0.078,0.922,0.0,positive
+"Despite these improvements, multiple papers highlight persistent issues related to device ergonomics",0.4475,0.235,0.671,0.094,positive
+The conference consensus suggests that XR is in a state of advancing maturity: capable of supporting,0.6908,0.207,0.751,0.042,positive
+""" ""XR hardware has reached a point where devices can support 30-minute to one-hour sessions without ",0.5913,0.292,0.636,0.072,positive
+"Manufacturers have improved thermal performance, display clarity, and tracking stability, which cont",0.7003,0.254,0.746,0.0,positive
+"Many immersive enterprise applications are already mature, with companies ranging from aerospace to ",0.4215,0.109,0.891,0.0,positive
+"Nevertheless, enterprise users still report concerns about battery life, device weight during extend",0.0,0.0,1.0,0.0,neutral
+"Overall, XR hardware is entering a reliable stage of maturity but has not yet achieved mainstream co",0.5023,0.16,0.84,0.0,positive
+""" ""XR is transitioning from early adoption into structured enterprise integration",0.0,0.0,1.0,0.0,neutral
+About 80% of enterprises will increase their investments in AR/VR/XR over the next 12 months,0.3182,0.141,0.859,0.0,positive
+Use cases that once required extensive configuration now operate reliably through standardized softw,0.0,0.0,1.0,0.0,neutral
+The maturity of XR is most visible in the rise of specialized deployment teams within enterprises an,0.6249,0.151,0.849,0.0,positive
+"Manufacturing, retail and CPG, and healthcare continue to lead the AR/VR/XR adoption, with 50% of ma",0.0,0.0,1.0,0.0,neutral
+"However, differing platform ecosystems and inconsistent developer tooling continue to slow XR's prog",0.0,0.0,1.0,0.0,neutral
+XR has reached an early-scale maturity phase: reliable enough for operational integration in certain,0.1901,0.116,0.884,0.0,positive
+""" ""Enterprise XR systems used in training and collaboration exhibit stable performance and predictab",0.5994,0.224,0.776,0.0,positive
+"Common observations include improved hand-tracking fidelity, more accurate room-scale mapping, and g",0.6808,0.272,0.728,0.0,positive
+Extended reality (XR) technology could deliver an estimated $1,0.0,0.0,1.0,0.0,neutral
+5 trillion boost to the global economy by 2030,0.4019,0.252,0.748,0.0,positive
+"Despite these advancements, adoption barriers remain, including limited compatibility across hardwar",-0.4404,0.0,0.843,0.157,negative
+The consensus is that XR has reached a dependable level of maturity for specific structured workflow,0.0516,0.048,0.952,0.0,positive

@@ -1,0 +1,20 @@
+source,platform,compound,pos,neu,neg,label
+https://www.xrtoday.com/mixed-reality/which-xr-firms-are-leading-the-charge-for-interoperability/,XR Today,0.1779,0.072,0.928,0.0,positive
+https://metaverse-standards.org/uncategorized/towards-interoperable-anchoring-for-xr/,Metaverse Standards Forum,0.34,0.107,0.893,0.0,positive
+https://research.google/blog/xr-blocks-accelerating-ai-xr-innovation/,Google Research Blog,-0.4215,0.0,0.853,0.147,negative
+https://www.roadtovr.com/openxr-1-1-update-shows-industry-consensus-on-key-technical-features/,Road to VR,0.7269,0.264,0.736,0.0,positive
+https://support.spaces.qualcomm.com/support/discussions/topics/72000789244,Qualcomm Spaces Forum,0.4019,0.137,0.863,0.0,positive
+https://xra.org/xra-hosts-discussion-on-interoperability-in-xr/,XR Association (XRA),0.5719,0.275,0.725,0.0,positive
+https://docs.godotengine.org/en/stable/tutorials/xr/index.html,Godot Engine Docs,0.0,0.0,1.0,0.0,neutral
+https://github.com/KhronosGroup/OpenXR-Docs,GitHub - KhronosGroup,0.0,0.0,1.0,0.0,neutral
+https://developer.android.com/develop/xr/openxr,Android Developers,0.7845,0.277,0.723,0.0,positive
+https://openxr-tutorial.com/index.html,OpenXR Tutorial,0.4019,0.144,0.856,0.0,positive
+https://techresearchonline.com/blog/how-extended-reality-is-transforming-industries/,Tech Research Online,0.0,0.0,1.0,0.0,neutral
+https://thinglink.com/blog/why-system-integrators-must-embrace-xr-and-immersive-learning-solutions/,ThingLink Blog,-0.0516,0.136,0.76,0.104,negative
+https://openxropticsforum.org/,OpenXR Optics Forum,0.7783,0.315,0.685,0.0,positive
+https://developer.android.com/xr,Android Developers - XR,0.0,0.0,1.0,0.0,neutral
+https://research.google/pubs/xdtk-a-cross-device-toolkit-for-input-interaction-in-xr/,Google Research (paper),0.0,0.0,1.0,0.0,neutral
+https://xrsi.org/wp-content/uploads/2020/03/XRSI-Standard-XR-Definitions-XR-001v002.pdf,XRSI (PDF),0.6808,0.248,0.752,0.0,positive
+https://xr.esa.int/Documents/ESA%20XR%20Strategy.pdf,ESA XR Strategy (PDF),0.7003,0.209,0.791,0.0,positive
+https://arxiv.org/html/2403.05205v4,arXiv,0.0,0.0,1.0,0.0,neutral
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10507089/,PubMed Central,0.0772,0.067,0.933,0.0,positive

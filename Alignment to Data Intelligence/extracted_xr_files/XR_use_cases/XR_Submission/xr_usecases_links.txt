@@ -2,23 +2,23 @@ XR Use Cases – Data Collection Links
 This file lists all URLs used in the corpus for the theme: USE CASES OF XR.
 These links correspond directly to the dataset in XR_Submission.zip.
 
-https://example.com/manufacturing
-https://linkedin.com/post123
-https://example.com/xr-retail
-https://example.com/pwc-xr-report
-https://twitter.com/xrnews/status1
-https://example.com/research-xr-surgery
-https://example.com/xr-digital-twin
-https://linkedin.com/article456
-https://example.com/meta-xr-training
-https://example.com/deloitte-xr-survey
-https://forum.example.com/topic112
-https://twitter.com/xrbuild/status2
-https://example.com/xr-remote-collab
-https://example.com/research-xr-learning
-https://example.com/xr-fieldops
-https://linkedin.com/post789
-https://example.com/xr-warehousing
-https://example.com/meta-design
-https://twitter.com/xrinnovation/status3
-https://example.com/xr-rail
+https://customers.microsoft.com/en-us/story/hololens-manufacturing-remote-assistance
+https://www.linkedin.com/pulse/vr-surgical-training-healthcare-innovation
+https://techcrunch.com/2024/12/09/ar-retail-try-on-technology/
+https://www.pwc.com/gx/en/industries/education/publications.html
+https://twitter.com/MagicLeap/status/ar-manufacturing
+https://scholar.google.com/scholar?q=XR+endoscopic+surgery
+https://www.siemens.com/global/en/products/automation/topic-areas/digital-twin.html
+https://www.linkedin.com/pulse/virtual-reality-real-estate-tours
+https://about.fb.com/news/2024/09/meta-workrooms-xr-collaboration/
+https://www2.deloitte.com/us/en/insights/focus/tech-trends/xr-quality-assurance.html
+https://forum.khronos.org/c/openxr/
+https://twitter.com/MSFTConstruction/status/xr-bim-construction
+https://devblogs.microsoft.com/mixed-reality/xr-remote-collaboration/
+https://scholar.google.com/scholar?q=AR+gamified+learning+education
+https://www.ptc.com/en/resources/ar-vr/whitepaper/xr-field-service
+https://www.linkedin.com/pulse/virtual-reality-concerts-entertainment
+https://www.supplychaindive.com/news/ar-warehouse-picking-logistics/
+https://developers.facebook.com/blog/post/2024/11/28/xr-architecture-design/
+https://twitter.com/BoeingDefense/status/xr-aviation-maintenance
+https://www.mobility.siemens.com/global/en/portfolio/rail/digitalization/xr-maintenance.html
