@@ -369,6 +369,20 @@ with st.sidebar:
 # MAIN CONTENT - EXECUTIVE CONTEXT
 # ============================================================================
 
+# Top Left Badge
+st.markdown("""
+<div style='position: fixed; top: 80px; left: 20px; z-index: 999;
+            background: linear-gradient(135deg, #0066CC 0%, #00C9A7 100%);
+            padding: 12px 24px; border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 102, 204, 0.3);
+            animation: fadeInLeft 0.8s ease-out;'>
+    <p style='margin: 0; color: white; font-weight: 800; font-size: 1.1rem;
+              letter-spacing: 0.03em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);'>
+        🔥 Who let this guy cook??
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
 # Hero Section
 st.markdown("# 🎯 Extended Reality (XR) Technology Readiness")
 st.markdown("### Executive Strategic Assessment Framework")
