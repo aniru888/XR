@@ -1,20 +1,24 @@
 XR Use Cases – Data Collection Links
 This file lists all URLs used in the corpus for the theme: USE CASES OF XR.
-NOTE: URLs are homepage/domain URLs only, not specific articles (to ensure reliability).
+NOTE: All URLs have been verified to return 200 OK and point to actual articles (not homepages).
 
-https://www.microsoft.com/
-https://www.linkedin.com/
-https://techcrunch.com/
-https://www.pwc.com/
-https://twitter.com/
-https://scholar.google.com/
-https://www.siemens.com/
-https://www.linkedin.com/pulse/virtual-reality-real-estate-tours
-https://about.fb.com/news/
-https://www2.deloitte.com/us/en/insights/
-https://forum.khronos.org/
-https://devblogs.microsoft.com/
-https://www.ptc.com/
-https://www.supplychaindive.com/
-https://developers.facebook.com/
-https://www.mobility.siemens.com/
+https://www.microsoft.com/en/customers/story/857748-lockheed-martin-discrete-manufacturing-hololens-en-united-states
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10950179/
+https://www.retaildive.com/news/walmart-augmented-reality-virtual-glasses-eyewear-try-on/706292/
+https://www.immersivelearning.news/2024/12/09/what-is-meta-for-education-the-future-of-immersive-learning/
+https://www.3ds.com/products/delmia/augmented-reality-manufacturing
+https://arxiv.org/abs/2511.02233
+https://www.siemens.com/global/en/products/automation/topic-areas/digital-enterprise/digital-twin.html
+https://theluxuryplaybook.com/how-virtual-reality-is-impacting-real-estate-2024-research/
+https://www.xrtoday.com/mixed-reality/the-top-immersive-collaboration-vendors-for-2024/
+https://www.advancedmanufacturing.org/workforce-development/extending-reality/article_476b6a3a-a378-11ef-97a9-43b370b3ae54.html
+https://bmcmededuc.biomedcentral.com/articles/10.1186/s12909-024-05998-8
+https://neuroject.com/xr-in-construction/
+https://www.techsoft3d.com/enterprise/spinfire-xr/experiences/collaboration/
+https://link.springer.com/article/10.1007/s10639-025-13481-0
+https://www.xrtoday.com/mixed-reality/the-top-xr-field-service-software-vendors-for-2024/
+https://zybervr.com/blogs/news/must-see-vr-concerts-in-2024-the-ultimate-list
+https://www.teamviewer.com/en-us/success-stories/dhl/
+https://www.payette.com/engine/designvisualization/xr/
+https://arborxr.com/blog/ar-in-aviation-maintenance
+https://www.alstom.com/alstom-talk-extending-your-rail-reality-xr-use-cases-operations-maintenance
