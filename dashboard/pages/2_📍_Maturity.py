@@ -108,8 +108,8 @@ st.markdown(f"""
 <div style='background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             padding: 20px; border-radius: 10px; border-left: 5px solid {COLORS['primary_blue']};
             margin: 20px 0;'>
-    <h4 style='margin: 0;'>💡 Key Finding</h4>
-    <p style='font-size: 1.1em; margin: 10px 0 0 0;'>{dimension.key_finding}</p>
+    <h4 style='margin: 0; color: {COLORS["primary_blue"]};'>💡 Key Finding</h4>
+    <p style='font-size: 1.1em; margin: 10px 0 0 0; color: #1a1a1a;'>{dimension.key_finding}</p>
 </div>
 """, unsafe_allow_html=True)
 
