@@ -1,0 +1,6 @@
+1) Run middleware adapter pilots to reduce vendor lock-in and shorten integration timelines.
+2) Engage with standards bodies such as Khronos and Metaverse Standards Forum to drive OpenXR extensions and anchoring formats.
+3) Add an interoperability scorecard for procurement evaluating API openness, SDK maturity, and integration tooling.
+4) Prioritize security-by-design for XR endpoints; include identity mapping and encrypted telemetry in pilots.
+5) Invest in edge compute and adaptive streaming to meet real-time latency requirements.
+6) Develop an 'Interop Playbook' (connectors, schema mappings, test harnesses) and train integration engineers.

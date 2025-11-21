@@ -1,0 +1,48 @@
+[SEED: RESEARCH_ABSTRACT_ARXIV_2025]
+The paradigm shift in Extended Reality (XR) is defined by the transition from Large Language Models (LLMs) to World Models. LLMs, trained on text tokens, lack inherent understanding of physics or causality. In contrast, World Models (like JEPA) learn a latent representation of the physical environment. For Industrial XR, this is non-negotiable. An LLM-powered AR assistant might hallucinate a safety valve where none exists. A World Model-powered agent understands the 3D spatial constraints and object permanence, ensuring data integrity for decision-making systems.
+
+[SEED: YOUTUBE_TRANSCRIPT_TWO_MINUTE_PAPERS]
+"Dear Fellow Scholars, hold onto your papers! Today we are simulating fluid dynamics inside a VR headset using Neural Physics. Previous methods used pre-baked animations. This new World Model predicts the water flow in real-time. Why does this matter? Imagine a flood response simulation for city planners. They don't need a text description; they need a physics-accurate visual prediction. This is Alignment to Data Intelligence at its finest. The AI isn't just generating pixels; it's solving differential equations in the latent space."
+
+[SEED: INDUSTRY_REPORT_NVIDIA_OMNIVERSE]
+Digital Twins are the "Decision Engines" of the future. However, a Digital Twin without a World Model is just a static 3D model. By integrating physics-informed neural networks, the XR interface becomes a predictive dashboard. Factory managers wearing AR glasses can see 'future states' of machinery—e.g., "Bearing failure predicted in 48 hours." This is the synergy of Analytics and XR. We are moving away from 'Chatbots in VR' to 'Spatial Agents in AR' that understand gravity, friction, and velocity.
+
+[SEED: SOCIAL_SENTIMENT_TWITTER_THREAD_#SPATIAL]
+@TechLead_XR: "Stop trying to jam ChatGPT into Apple Vision Pro. Text is the wrong interface for 3D. We need World Models that understand I'm pointing at a broken pipe, not just reading the manual."
+@Privacy_Hawk: "World Models are terrifying. To work, they need to map my entire room and predict my movements. Eye-tracking data + Physics prediction = Total Surveillance."
+@VC_Insider: "The money is moving. Generative Text funding is flat. Generative World/Video funding is up 400%. The market wants AI that understands the physical world."
+
+[SEED: ACADEMIC_LECTURE_YANN_LECUN]
+"LLMs are autoregressive. They predict the next token. But the world is not a sequence of tokens. If you are driving a car in XR, or operating a surgical robot, you cannot rely on probability of words. You need a Joint Embedding Predictive Architecture (JEPA). The system must understand: 'If I cut here, the tissue bleeds.' That is a World Model. That is the future of XR Data Intelligence."
+
+[EXPANDED: ARXIV_ABSTRACT_3D_GAUSSIAN_SPLATTING]
+"A Survey on 3D Gaussian Splatting" (2025) highlights the shift towards explicit scene representation. 3D Gaussian Splatting enables real-time rendering and editability, crucial for "spatial intelligence" and "embodied AI". Unlike implicit models, this approach allows for physics-aware scene changes, directly supporting the development of World Models that understand physical spaces.
+
+[EXPANDED: YANN_LECUN_JEPA_UPDATE_2024]
+Yann LeCun continues to advocate for JEPA (Joint Embedding Predictive Architecture) as the path to autonomous machine intelligence. Unlike LLMs that predict tokens, JEPA predicts in abstract representation space. V-JEPA (Video-based JEPA) learns motion and object interactions from video, enabling the model to understand "cause and effect" in a physical sense. This is critical for XR agents that need to navigate and interact with the real world, not just describe it.
+
+[EXPANDED: NVIDIA_EARTH_2_DIGITAL_TWIN]
+NVIDIA Earth-2 is a prime example of a "World Model" in action. It combines AI (CorrDiff) with physical simulations to predict weather patterns. It's not just generating images; it's solving physics problems 1000x faster than traditional numerical models. This "Digital Twin" capability is what Industrial XR needs—predictive power based on physical laws, not statistical text correlations.
+
+[EXPANDED: TWO_MINUTE_PAPERS_GENESIS]
+"Genesis" is a universal physics engine for robotics that acts as a generative world model. It can generate 30,000 diverse worlds in parallel. This differentiability allows users to define an end-state, and the AI calculates the forces needed. This is the "Spatial Intelligence" required for advanced XR simulations, moving far beyond pre-baked animations.
+
+[EXPANDED: COLDFUSION_SPATIAL_COMPUTING]
+ColdFusion highlights the convergence of AI agents and spatial computing. While not a single product, the integration of AI services (like computer vision) with spatial data (GIS, 3D maps) is creating a new class of applications. "Spatial Computing AI Agents" will be able to perceive their environment and execute complex tasks, bridging the gap between digital intelligence and physical reality.
+
+[EXPANDED: UNITY_SENTIS_AI_AGENTS]
+Unity 6 and Sentis enable "Spatial Agents" to run directly on-device. Sentis allows neural networks to control NPCs or analyze sensor data in real-time without cloud latency. This is a key enabler for "embodied AI" in XR, where an agent needs to react instantly to the user's physical actions and environment.
+
+[EXPANDED: META_MIRROR_WORLD]
+Meta's "Mirror World" concept is the ultimate World Model—a real-time digital twin of the physical world. By combining AI with spatial computing (Quest headsets, Ray-Ban glasses), Meta aims to create a system that understands context and object permanence. This "AI Spatial Computing" vision aligns perfectly with the shift from generative text to generative worlds.
+
+[EXPANDED: INDUSTRY_BLOG_UNREAL_ENGINE]
+Unreal Engine's move towards AI-assisted content creation (Project Titan, UE 5.4/6) focuses on procedural generation and "Mover-driven" characters. The goal is to create vast, interactive open worlds that follow physical rules. This supports the "World Model" thesis: the value is in the simulation of the world, not just the rendering of it.
+
+[EXPANDED: SOCIAL_SENTIMENT_REDDIT_XR_DEV]
+"I'm tired of 'AI' just meaning chatbots. In VR, I need an AI that knows I'm holding a wrench and highlights the bolt I need to turn. That's spatial awareness, not language processing."
+"The latency on cloud-based LLMs is too high for AR. We need on-device World Models like what Unity Sentis is promising."
+"Digital Twins are useless if they don't predict failures. Just seeing a 3D model is 2015 tech. I need physics-informed predictions."
+
+[EXPANDED: ACADEMIC_PAPER_SPATIAL_CONDITIONING]
+"Enhancing JEPAs with Spatial Conditioning" (NeurIPS 2024) shows that adding position information to JEPA improves performance. This confirms that "Spatial Intelligence" requires explicit spatial data, not just flattened token sequences. This is a foundational argument for why LLMs are insufficient for XR.

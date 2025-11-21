@@ -1,0 +1,23 @@
+Hashtags:
+#SpatialComputing
+#WorldModels
+#GenerativeAI
+#ExtendedReality
+#DigitalTwins
+#IndustrialMetaverse
+#AI
+#MachineLearning
+#DeepLearning
+#ComputerVision
+
+Accounts:
+@YannLeCun - https://twitter.com/ylecun
+@NVIDIAAI - https://twitter.com/nvidiaai
+@MetaRealityLabs - https://twitter.com/MetaRealityLabs
+@Unity - https://twitter.com/unity
+@UnrealEngine - https://twitter.com/UnrealEngine
+@TwoMinutePapers - https://www.youtube.com/user/keeroyz
+@ColdFusion_TV - https://www.youtube.com/user/coldfustion
+@TechCrunch - https://twitter.com/TechCrunch
+@VentureBeat - https://twitter.com/VentureBeat
+@OpenAI - https://twitter.com/OpenAI

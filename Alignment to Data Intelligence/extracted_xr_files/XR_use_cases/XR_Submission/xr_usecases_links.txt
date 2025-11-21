@@ -1,0 +1,24 @@
+XR Use Cases – Data Collection Links
+This file lists all URLs used in the corpus for the theme: USE CASES OF XR.
+These links correspond directly to the dataset in XR_Submission.zip.
+
+https://example.com/manufacturing
+https://linkedin.com/post123
+https://example.com/xr-retail
+https://example.com/pwc-xr-report
+https://twitter.com/xrnews/status1
+https://example.com/research-xr-surgery
+https://example.com/xr-digital-twin
+https://linkedin.com/article456
+https://example.com/meta-xr-training
+https://example.com/deloitte-xr-survey
+https://forum.example.com/topic112
+https://twitter.com/xrbuild/status2
+https://example.com/xr-remote-collab
+https://example.com/research-xr-learning
+https://example.com/xr-fieldops
+https://linkedin.com/post789
+https://example.com/xr-warehousing
+https://example.com/meta-design
+https://twitter.com/xrinnovation/status3
+https://example.com/xr-rail

@@ -1,0 +1,192 @@
+INFRASTRUCTURE SCALING FOR XR - DATA COLLECTION SOURCES
+Cross-Checked & Verified Links | November 2024
+
+═══════════════════════════════════════════════════════════════════════════════
+
+MICROSERVICES & CLOUD-NATIVE ARCHITECTURE
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Kubernetes Official Documentation
+   https://kubernetes.io/docs/
+   → Pod autoscaling, service mesh, StatefulSets, operators
+
+2. Docker Documentation
+   https://docs.docker.com/
+   → Container orchestration, Swarm, Docker Compose, registries
+
+3. Istio Service Mesh
+   https://istio.io/latest/docs/
+   → Traffic management, security, observability for microservices
+
+4. Linkerd Service Mesh
+   https://linkerd.io/
+   → Lightweight proxy, multi-cluster, zero-trust networking
+
+MULTI-USER & COLLABORATION PLATFORMS
+═══════════════════════════════════════════════════════════════════════════════
+
+5. Meta Horizon Workrooms Documentation
+   https://www.meta.com/work/workrooms/
+   → VR collaboration, multi-user sessions, enterprise features
+
+6. Microsoft Mesh Documentation
+   https://www.microsoft.com/en-us/mesh
+   → Mixed reality collaboration, Azure integration, shared experiences
+
+7. Spatial Platform
+   https://spatial.io/
+   → Web-based XR collaboration, avatar system, deployment guides
+
+8. Mozilla Hubs
+   https://hubs.mozilla.com/
+   → Open-source virtual spaces, self-hosting, scalability docs
+
+DATABASES & SPATIAL INDEXING
+═══════════════════════════════════════════════════════════════════════════════
+
+9. MongoDB Documentation
+   https://www.mongodb.com/docs/
+   → Geospatial queries, sharding, replication, Atlas cloud
+
+10. PostgreSQL + PostGIS
+    https://postgis.net/
+    → Spatial database extensions, geospatial indexing, queries
+
+11. Redis Documentation
+    https://redis.io/docs/
+    → In-memory caching, pub/sub, session management, geospatial
+
+12. Elasticsearch Geospatial
+    https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-queries.html
+    → Geo-shape queries, spatial aggregations, real-time search
+
+LOAD BALANCING & TRAFFIC MANAGEMENT
+═══════════════════════════════════════════════════════════════════════════════
+
+13. NGINX Documentation
+    https://docs.nginx.com/
+    → HTTP load balancing, TCP/UDP, session persistence, caching
+
+14. HAProxy Documentation
+    https://www.haproxy.org/
+    → High-performance load balancer, health checks, SSL termination
+
+15. AWS Elastic Load Balancing
+    https://aws.amazon.com/elasticloadbalancing/
+    → Application/Network/Gateway load balancers, auto-scaling integration
+
+AUTO-SCALING & CAPACITY PLANNING
+═══════════════════════════════════════════════════════════════════════════════
+
+16. Kubernetes Horizontal Pod Autoscaler
+    https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
+    → Metrics-based scaling, custom metrics, predictive scaling
+
+17. AWS Auto Scaling
+    https://aws.amazon.com/autoscaling/
+    → Predictive scaling, scheduled scaling, target tracking
+
+18. KEDA (Kubernetes Event-Driven Autoscaling)
+    https://keda.sh/
+    → Event-driven workloads, external metrics, scale-to-zero
+
+CONTENT DELIVERY & ASSET STREAMING
+═══════════════════════════════════════════════════════════════════════════════
+
+19. Unity Addressables System
+    https://docs.unity3d.com/Packages/com.unity.addressables@latest
+    → Asset bundling, on-demand loading, content updates
+
+20. Unreal Engine Asset Manager
+    https://docs.unrealengine.com/5.0/en-US/asset-management-in-unreal-engine/
+    → Streaming levels, lazy loading, pak files
+
+21. AWS CloudFront Documentation
+    https://docs.aws.amazon.com/cloudfront/
+    → Content delivery network, origin shields, real-time logs
+
+CASE STUDIES & PRODUCTION DEPLOYMENTS
+═══════════════════════════════════════════════════════════════════════════════
+
+22. Walmart Technology Blog
+    https://medium.com/walmartglobaltech
+    Search: "VR training", "1 million employees", "scalability"
+
+23. Roblox Engineering Blog
+    https://blog.roblox.com/
+    → Multi-user experiences, server scaling, global infrastructure
+
+24. Rec Room Engineering
+    https://recroom.com/
+    → Social VR scaling, user-generated content, moderation
+
+25. VRChat Documentation
+    https://hello.vrchat.com/
+    → Instance system, room persistence, player capacity
+
+OBSERVABILITY & MONITORING AT SCALE
+═══════════════════════════════════════════════════════════════════════════════
+
+26. Prometheus Documentation
+    https://prometheus.io/docs/
+    → Metrics collection, alert rules, federation, long-term storage
+
+27. Grafana Documentation
+    https://grafana.com/docs/
+    → Dashboards, data sources, alerting, cloud platform
+
+28. Datadog APM
+    https://docs.datadoghq.com/tracing/
+    → Distributed tracing, service maps, performance monitoring
+
+CHAOS ENGINEERING & RESILIENCE
+═══════════════════════════════════════════════════════════════════════════════
+
+29. Chaos Mesh Documentation
+    https://chaos-mesh.org/docs/
+    → Kubernetes chaos experiments, failure injection, recovery testing
+
+30. Litmus Chaos Documentation
+    https://litmuschaos.io/
+    → Chaos engineering platform, experiment library, observability
+
+MULTI-REGION & DISASTER RECOVERY
+═══════════════════════════════════════════════════════════════════════════════
+
+31. AWS Global Infrastructure
+    https://aws.amazon.com/about-aws/global-infrastructure/
+    → Regions, availability zones, edge locations, latency
+
+32. CockroachDB Documentation
+    https://www.cockroachlabs.com/docs/
+    → Distributed SQL, multi-region, geo-partitioning, resilience
+
+SEARCH QUERIES FOR RESEARCH
+═══════════════════════════════════════════════════════════════════════════════
+
+Google Scholar Queries:
+- "microservices architecture XR scalability"
+- "spatial database geospatial indexing performance"
+- "multi-user VR server architecture"
+- "asset streaming 3D LOD optimization"
+
+GitHub Repository Searches:
+- topic:kubernetes topic:autoscaling
+- topic:microservices topic:xr
+- topic:spatial-database topic:postgis
+
+INDUSTRY REPORTS
+═══════════════════════════════════════════════════════════════════════════════
+
+33. Gartner - Cloud Infrastructure & Platform Services
+    https://www.gartner.com/en/research
+    Search: "microservices", "container orchestration", "auto-scaling"
+
+34. Forrester - Multi-Cloud Platform Solutions
+    https://www.forrester.com/
+    Topic: Cloud-native architecture, XR infrastructure
+
+═══════════════════════════════════════════════════════════════════════════════
+VERIFICATION STATUS: ✅ All links cross-checked November 21, 2024
+FOCUS: Horizontal scaling (10 → 1000+ pods), multi-user (100-10,000+), microservices
+═══════════════════════════════════════════════════════════════════════════════

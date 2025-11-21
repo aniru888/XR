@@ -1,0 +1,121 @@
+source,date,content,category,engagement_score,industry,provisioning_time_reduction_pct
+Boeing Tech,2024-01-01,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,692,Manufacturing,78
+Microsoft Intune,2024-01-02,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,213,Defense,81
+Okta Resources,2024-01-03,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,139,Manufacturing,91
+Microsoft Intune,2024-01-04,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,400,Logistics,62
+JAMF Blog,2024-01-05,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,323,Healthcare,87
+Microsoft Intune,2024-01-06,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,417,Enterprise IT,69
+Microsoft Intune,2024-01-07,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,448,Enterprise IT,94
+JAMF Blog,2024-01-08,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,214,Defense,88
+Boeing Tech,2024-01-09,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,422,Manufacturing,74
+Boeing Tech,2024-01-10,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,667,Defense,92
+Microsoft Intune,2024-01-11,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,139,Healthcare,66
+JAMF Blog,2024-01-12,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,139,Defense,71
+JAMF Blog,2024-01-13,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,388,Enterprise IT,89
+Okta Resources,2024-01-14,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,361,Enterprise IT,80
+Boeing Tech,2024-01-15,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,315,Logistics,90
+VMware Blog,2024-01-16,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,246,Logistics,83
+Boeing Tech,2024-01-17,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,435,Healthcare,79
+Boeing Tech,2024-01-18,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,267,Manufacturing,63
+Okta Resources,2024-01-19,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,191,Defense,87
+VMware Blog,2024-01-20,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,452,Healthcare,79
+Okta Resources,2024-01-21,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,670,Logistics,83
+VMware Blog,2024-01-22,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,670,Defense,91
+Microsoft Intune,2024-01-23,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,462,Logistics,93
+VMware Blog,2024-01-24,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,656,Defense,61
+Okta Resources,2024-01-25,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,444,Manufacturing,74
+Boeing Tech,2024-01-26,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,269,Healthcare,93
+VMware Blog,2024-01-27,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,455,Defense,65
+VMware Blog,2024-01-28,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,290,Enterprise IT,71
+JAMF Blog,2024-01-29,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,521,Enterprise IT,62
+Boeing Tech,2024-01-30,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,106,Defense,77
+Microsoft Intune,2024-01-31,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,232,Defense,80
+Okta Resources,2024-02-01,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,656,Defense,74
+Microsoft Intune,2024-02-02,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,130,Enterprise IT,92
+Boeing Tech,2024-02-03,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,634,Enterprise IT,94
+VMware Blog,2024-02-04,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,525,Defense,85
+VMware Blog,2024-02-05,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,493,Logistics,67
+Boeing Tech,2024-02-06,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,462,Logistics,89
+VMware Blog,2024-02-07,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,536,Manufacturing,82
+VMware Blog,2024-02-08,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,650,Healthcare,73
+VMware Blog,2024-02-09,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,181,Logistics,73
+Okta Resources,2024-02-10,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,455,Enterprise IT,61
+Okta Resources,2024-02-11,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,357,Logistics,64
+JAMF Blog,2024-02-12,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,688,Manufacturing,73
+Microsoft Intune,2024-02-13,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,623,Manufacturing,84
+Boeing Tech,2024-02-14,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,394,Healthcare,79
+Boeing Tech,2024-02-15,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,323,Logistics,61
+Boeing Tech,2024-02-16,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,624,Enterprise IT,65
+JAMF Blog,2024-02-17,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,145,Enterprise IT,76
+Okta Resources,2024-02-18,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,212,Defense,84
+JAMF Blog,2024-02-19,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,332,Enterprise IT,87
+Boeing Tech,2024-02-20,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,116,Healthcare,61
+Microsoft Intune,2024-02-21,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,459,Healthcare,94
+VMware Blog,2024-02-22,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,322,Enterprise IT,64
+Okta Resources,2024-02-23,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,547,Enterprise IT,60
+Okta Resources,2024-02-24,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,464,Defense,71
+JAMF Blog,2024-02-25,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,425,Enterprise IT,82
+Okta Resources,2024-02-26,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,566,Defense,90
+Boeing Tech,2024-02-27,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,513,Defense,70
+Boeing Tech,2024-02-28,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,554,Enterprise IT,69
+JAMF Blog,2024-02-29,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,685,Manufacturing,62
+Boeing Tech,2024-03-01,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,332,Manufacturing,73
+Microsoft Intune,2024-03-02,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,323,Defense,75
+JAMF Blog,2024-03-03,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,511,Enterprise IT,69
+Microsoft Intune,2024-03-04,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,671,Manufacturing,88
+VMware Blog,2024-03-05,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,434,Enterprise IT,69
+Microsoft Intune,2024-03-06,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,321,Enterprise IT,71
+VMware Blog,2024-03-07,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,136,Enterprise IT,89
+VMware Blog,2024-03-08,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,377,Logistics,60
+Microsoft Intune,2024-03-09,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,295,Enterprise IT,64
+JAMF Blog,2024-03-10,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,583,Logistics,79
+Boeing Tech,2024-03-11,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,341,Defense,67
+Boeing Tech,2024-03-12,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,423,Manufacturing,71
+VMware Blog,2024-03-13,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,291,Manufacturing,60
+VMware Blog,2024-03-14,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,116,Manufacturing,79
+JAMF Blog,2024-03-15,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,623,Manufacturing,87
+Okta Resources,2024-03-16,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,500,Manufacturing,71
+Microsoft Intune,2024-03-17,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,121,Manufacturing,87
+VMware Blog,2024-03-18,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,573,Manufacturing,74
+Boeing Tech,2024-03-19,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,219,Defense,65
+JAMF Blog,2024-03-20,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,309,Enterprise IT,79
+Microsoft Intune,2024-03-21,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,405,Healthcare,73
+JAMF Blog,2024-03-22,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,369,Logistics,61
+Microsoft Intune,2024-03-23,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,384,Healthcare,68
+Microsoft Intune,2024-03-24,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,326,Healthcare,79
+VMware Blog,2024-03-25,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,480,Enterprise IT,85
+JAMF Blog,2024-03-26,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,559,Enterprise IT,88
+JAMF Blog,2024-03-27,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,106,Enterprise IT,60
+Boeing Tech,2024-03-28,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,128,Manufacturing,94
+Boeing Tech,2024-03-29,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,132,Defense,65
+VMware Blog,2024-03-30,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,745,Manufacturing,64
+VMware Blog,2024-03-31,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,178,Defense,92
+Okta Resources,2024-04-01,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,558,Defense,73
+Boeing Tech,2024-04-02,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,669,Healthcare,71
+Microsoft Intune,2024-04-03,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,637,Healthcare,79
+JAMF Blog,2024-04-04,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,581,Defense,83
+VMware Blog,2024-04-05,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,529,Defense,93
+JAMF Blog,2024-04-06,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,384,Manufacturing,84
+JAMF Blog,2024-04-07,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,615,Manufacturing,88
+Okta Resources,2024-04-08,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,198,Healthcare,90
+Boeing Tech,2024-04-09,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,496,Enterprise IT,82
+VMware Blog,2024-04-10,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,588,Defense,79
+JAMF Blog,2024-04-11,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,138,Manufacturing,82
+VMware Blog,2024-04-12,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,370,Healthcare,75
+Microsoft Intune,2024-04-13,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,256,Manufacturing,67
+Okta Resources,2024-04-14,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,174,Defense,80
+Microsoft Intune,2024-04-15,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,229,Defense,60
+VMware Blog,2024-04-16,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,183,Logistics,67
+VMware Blog,2024-04-17,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,121,Enterprise IT,88
+Boeing Tech,2024-04-18,"VMware Workspace ONE treats XR headsets as standard endpoints, enabling centralized MDM for 10,000+ Meta Quest devices.",Mobile_Device_Management,558,Logistics,91
+JAMF Blog,2024-04-19,"Microsoft Intune XR profiles enforce security policies, automatically wiping enterprise data when headset leaves geofence.",Mobile_Device_Management,638,Healthcare,64
+JAMF Blog,2024-04-20,Scalability bottleneck: manual provisioning takes 15 minutes per headset; SSO with Okta reduces onboarding to 30 seconds.,Mobile_Device_Management,481,Manufacturing,81
+Microsoft Intune,2024-04-21,"Fleet management at Boeing: over-the-air updates deployed to 5,000 HoloLens 2 devices overnight without technician intervention.",Mobile_Device_Management,539,Healthcare,93
+Okta Resources,2024-04-22,Biometric authentication (iris scanning) eliminates password friction; workers don XR glasses and authenticate in 2 seconds.,Mobile_Device_Management,703,Defense,60
+JAMF Blog,2024-04-23,JAMF Pro MDM extended to support Apple Vision Pro enterprise deployments with automated app distribution and compliance reporting.,Mobile_Device_Management,120,Logistics,85
+Boeing Tech,2024-04-24,"XR kiosk mode locks devices to single-purpose apps, preventing factory workers from installing games on $3500 training headsets.",Mobile_Device_Management,402,Logistics,69
+Microsoft Intune,2024-04-25,"Zero-touch provisioning: headsets ship pre-configured; worker unboxes, connects to Wi-Fi, and SSO auto-authenticates to corporate directory.",Mobile_Device_Management,183,Logistics,89
+Microsoft Intune,2024-04-26,"Conditional access policies block XR device usage outside approved locations, preventing IP theft of 3D CAD models.",Mobile_Device_Management,552,Healthcare,77
+Boeing Tech,2024-04-27,Telemetry dashboards in MDM track XR battery health across fleet; proactive replacement before device failure in critical operations.,Mobile_Device_Management,486,Defense,76
+Okta Resources,2024-04-28,"Content distribution network integrated with MDM pushes 5GB training modules to 1,000 headsets in 20 minutes vs 6 hours manual USB.",Mobile_Device_Management,606,Manufacturing,85
+Boeing Tech,2024-04-29,Compliance audit: MDM logs prove HIPAA-compliant XR usage in hospitals; automatic screenshot redaction prevents PHI data leaks.,Mobile_Device_Management,356,Manufacturing,67

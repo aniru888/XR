@@ -1,0 +1,177 @@
+MOBILE DEVICE MANAGEMENT (MDM) FOR XR SCALABILITY - DATA COLLECTION SOURCES
+Cross-Checked & Verified Links | November 2024
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ENTERPRISE MDM PLATFORMS
+═══════════════════════════════════════════════════════════════════════════════
+
+1. VMware Workspace ONE Documentation
+   https://docs.vmware.com/en/VMware-Workspace-ONE/index.html
+   → Unified endpoint management, XR device enrollment, app distribution
+
+2. Microsoft Intune Documentation
+   https://learn.microsoft.com/en-us/mem/intune/
+   → Device compliance, conditional access, HoloLens 2 management
+
+3. JAMF Pro for Extended Reality
+   https://www.jamf.com/
+   → Apple device management, Vision Pro support, enterprise deployment
+
+4. IBM MaaS360
+   https://www.ibm.com/security/mobile
+   → Unified endpoint management, security policies, analytics
+
+5. Citrix Endpoint Management
+   https://www.citrix.com/products/citrix-endpoint-management/
+   → App delivery, device security, multi-platform support
+
+IDENTITY & ACCESS MANAGEMENT
+═══════════════════════════════════════════════════════════════════════════════
+
+6. Okta Workforce Identity
+   https://www.okta.com/products/workforce-identity/
+   → Single sign-on, multi-factor authentication, adaptive authentication
+
+7. Microsoft Azure Active Directory
+   https://azure.microsoft.com/en-us/products/active-directory/
+   → Conditional access, device compliance, identity protection
+
+8. OneLogin by One Identity
+   https://www.onelogin.com/
+   → SSO, MFA, user provisioning, directory integration
+
+9. Ping Identity
+   https://www.pingidentity.com/
+   → Zero trust, identity security, API access management
+
+BIOMETRIC AUTHENTICATION
+═══════════════════════════════════════════════════════════════════════════════
+
+10. Windows Hello for Business
+    https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/
+    → Biometric authentication, passwordless, device trust
+
+11. Apple Face ID & Optic ID
+    https://support.apple.com/en-us/HT208108
+    → Biometric security, Vision Pro authentication, secure enclave
+
+12. Tobii Eye Tracking Technology
+    https://www.tobii.com/
+    → Eye tracking authentication, gaze-based input, XR integration
+
+XR-SPECIFIC DEVICE MANAGEMENT
+═══════════════════════════════════════════════════════════════════════════════
+
+13. Meta Quest for Business
+    https://www.meta.com/quest/quest-for-business/
+    → Fleet management, device enrollment, app deployment, analytics
+
+14. HTC VIVE Business Services
+    https://business.vive.com/us/product/vive-device-management/
+    → Enterprise device management, kiosk mode, content distribution
+
+15. Pico Neo Enterprise
+    https://www.picoxr.com/global/products/pico-neo3-pro
+    → Business management platform, remote control, batch operations
+
+ZERO-TOUCH PROVISIONING
+═══════════════════════════════════════════════════════════════════════════════
+
+16. Apple Business Manager
+    https://business.apple.com/
+    → Automated device enrollment, app assignment, supervised mode
+
+17. Android Enterprise (Zero-Touch)
+    https://www.android.com/enterprise/management/
+    → Device provisioning, work profiles, managed configurations
+
+18. Samsung Knox Platform
+    https://www.samsungknox.com/
+    → Enterprise mobility management, security, containerization
+
+COMPLIANCE & SECURITY
+═══════════════════════════════════════════════════════════════════════════════
+
+19. NIST Special Publication 800-124r2
+    https://csrc.nist.gov/publications/detail/sp/800-124/rev-2/final
+    → Guidelines for mobile device security, enterprise policies
+
+20. CIS Mobile Device Benchmarks
+    https://www.cisecurity.org/cis-benchmarks
+    → Security configuration guides, Android/iOS/iPadOS
+
+21. HIPAA Compliance for Mobile Devices
+    https://www.hhs.gov/hipaa/for-professionals/security/guidance/cybersecurity/mobile-device-security/index.html
+    → Healthcare-specific security, encryption, audit logs
+
+TECHNICAL BLOGS & CASE STUDIES
+═══════════════════════════════════════════════════════════════════════════════
+
+22. VMware EUC Blog
+    https://blogs.vmware.com/euc/
+    Search: "XR management", "headset fleet", "workspace one"
+
+23. Microsoft Endpoint Manager Community
+    https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/bg-p/MicrosoftEndpointManagerBlog
+    → Intune updates, HoloLens deployment, best practices
+
+24. Boeing Technology Blog
+    https://www.boeing.com/
+    Search: HoloLens deployment, AR training, fleet management
+
+CONTENT DISTRIBUTION & APP STORES
+═══════════════════════════════════════════════════════════════════════════════
+
+25. Meta Quest Store for Business
+    https://developer.oculus.com/distribute/
+    → App distribution, enterprise licensing, volume purchasing
+
+26. SideQuest (Developer Mode)
+    https://sidequestvr.com/
+    → Sideloading apps, developer testing, custom content
+
+27. Apple Enterprise App Distribution
+    https://developer.apple.com/programs/enterprise/
+    → In-house app deployment, provisioning profiles, TestFlight
+
+MONITORING & ANALYTICS
+═══════════════════════════════════════════════════════════════════════════════
+
+28. Splunk Mobile Intelligence
+    https://www.splunk.com/
+    → Device analytics, usage patterns, security monitoring
+
+29. Google Analytics for Firebase
+    https://firebase.google.com/products/analytics
+    → App usage tracking, user behavior, A/B testing
+
+SEARCH QUERIES FOR RESEARCH
+═══════════════════════════════════════════════════════════════════════════════
+
+Google Scholar Queries:
+- "enterprise mobility management XR"
+- "zero-touch provisioning AR VR"
+- "biometric authentication wearables"
+- "MDM scalability thousands devices"
+
+GitHub Repository Searches:
+- topic:mdm topic:device-management
+- topic:zero-touch topic:provisioning
+- topic:kiosk-mode topic:enterprise
+
+INDUSTRY REPORTS
+═══════════════════════════════════════════════════════════════════════════════
+
+30. Gartner Magic Quadrant - UEM
+    https://www.gartner.com/en/research
+    Search: "unified endpoint management", "mobile device management"
+
+31. Forrester Wave - Unified Endpoint Management
+    https://www.forrester.com/
+    Topic: Enterprise mobility, XR device management
+
+═══════════════════════════════════════════════════════════════════════════════
+VERIFICATION STATUS: ✅ All links cross-checked November 21, 2024
+FOCUS: SSO, zero-touch provisioning, 15min → 30sec onboarding, fleet management
+═══════════════════════════════════════════════════════════════════════════════

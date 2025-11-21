@@ -1,0 +1,10 @@
+1. arXiv: Artificial Intelligence (cs.AI) - https://arxiv.org/list/cs.AI/recent
+2. arXiv: Computer Vision (cs.CV) - https://arxiv.org/list/cs.CV/recent
+3. IEEE Xplore Search: Spatial Computing - https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=%22Spatial%20Computing%22
+4. ACM Digital Library - https://dl.acm.org/
+5. Google Scholar - https://scholar.google.com/
+6. Papers with Code - https://paperswithcode.com/
+7. ResearchGate - https://www.researchgate.net/
+8. ScienceDirect - https://www.sciencedirect.com/
+9. SpringerLink - https://link.springer.com/
+10. Semantic Scholar - https://www.semanticscholar.org/

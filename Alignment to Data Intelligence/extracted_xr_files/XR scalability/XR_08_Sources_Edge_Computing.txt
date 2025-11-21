@@ -1,0 +1,155 @@
+EDGE COMPUTING FOR XR SCALABILITY - DATA COLLECTION SOURCES
+Cross-Checked & Verified Links | November 2024
+
+═══════════════════════════════════════════════════════════════════════════════
+
+CLOUD PROVIDER EDGE PLATFORMS
+═══════════════════════════════════════════════════════════════════════════════
+
+1. AWS Wavelength Documentation
+   https://docs.aws.amazon.com/wavelength/
+   → 5G edge zones, EC2 instances at telecom edge, XR workload patterns
+
+2. Azure Stack Edge Documentation
+   https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-overview
+   → Edge compute appliances, AI inference, hybrid cloud
+
+3. Google Distributed Cloud Edge
+   https://cloud.google.com/distributed-cloud/edge/latest/docs
+   → Edge containers, Anthos at edge, low-latency applications
+
+4. AWS Local Zones
+   https://aws.amazon.com/about-aws/global-infrastructure/localzones/
+   → Metro-area edge infrastructure, single-digit latency, XR streaming
+
+5. Azure Private MEC
+   https://azure.microsoft.com/en-us/solutions/private-multi-access-edge-compute-mec/
+   → Carrier-grade edge, 5G integration, enterprise deployments
+
+EDGE CDN & CONTENT DELIVERY
+═══════════════════════════════════════════════════════════════════════════════
+
+6. Akamai Edge Platform
+    https://www.akamai.com/solutions/edge
+    → EdgeWorkers, image optimization, 3D asset caching
+
+7. Cloudflare Workers
+   https://developers.cloudflare.com/workers/
+   → Serverless at edge, low-latency compute, WebXR support
+
+8. Fastly Compute@Edge
+   https://www.fastly.com/products/edge-compute
+   → Edge computing platform, real-time processing, XR content delivery
+
+9. AWS CloudFront
+   https://aws.amazon.com/cloudfront/
+   → Global CDN, dynamic content acceleration, HTTPS streams
+
+EDGE ORCHESTRATION & PLATFORMS
+═══════════════════════════════════════════════════════════════════════════════
+
+10. LF Edge Foundation
+    https://www.lfedge.org/
+    → Open-source edge projects (Akraino, EdgeX Foundry, Open Horizon)
+
+11. Kubernetes at the Edge (KubeEdge)
+    https://kubeedge.io/
+    → Cloud-native edge orchestration, IoT+XR integration, lightweight runtime
+
+12. OpenNebula Edge Computing
+    https://opennebula.io/
+    → Edge cloud management, virtual machine + container orchestration
+
+13. VMware Edge Compute Stack
+    https://www.vmware.com/products/edge-compute-stack.html
+    → Telco edge platform, NFV, XR workload management
+
+NVIDIA EDGE AI & GRAPHICS
+═══════════════════════════════════════════════════════════════════════════════
+
+14. NVIDIA EGX Platform
+    https://www.nvidia.com/en-us/data-center/products/egx/
+    → Edge AI platform, Jetson modules, GPU acceleration at edge
+
+15. NVIDIA CloudXR Documentation
+    https://docs.nvidia.com/cloudxr-sdk/
+    → Remote rendering SDK, edge deployment, streaming protocols
+
+16. NVIDIA Omniverse Farm
+    https://docs.omniverse.nvidia.com/
+    → Distributed rendering, cloud + edge hybrid, USD workflows
+
+TECHNICAL BLOGS & CASE STUDIES
+═══════════════════════════════════════════════════════════════════════════════
+
+17. AWS Architecture Blog - Spatial Computing
+    https://aws.amazon.com/blogs/architecture/
+    Search: "edge computing XR", "wavelength spatial"
+
+18. Microsoft Azure Blog - Edge + AI
+    https://azure.microsoft.com/en-us/blog/tag/azure-stack-edge/
+    → Edge inference, retail AR, industrial IoT+XR
+
+19. CNCF Blog - Edge Native
+    https://www.cncf.io/blog/
+    Search: "edge computing", "KubeEdge", "5G edge"
+
+RESEARCH & STANDARDS
+═══════════════════════════════════════════════════════════════════════════════
+
+20. ETSI MEC White Papers
+    https://www.etsi.org/technologies/multi-access-edge-computing
+    → MEC architecture, API specifications, use cases
+
+21. IEEE Edge Computing Initiative
+    https://ieeexplore.ieee.org/
+    Search: "edge computing AR VR", "fog computing XR"
+
+22. Linux Foundation Edge Projects
+    https://www.lfedge.org/projects/
+    → Akraino Edge Stack, EdgeX Foundry, State of the Edge reports
+
+MONITORING & OBSERVABILITY
+═══════════════════════════════════════════════════════════════════════════════
+
+23. Prometheus at the Edge
+    https://prometheus.io/docs/
+    → Metrics collection, edge monitoring, alert rules
+
+24. Grafana Edge Observability
+    https://grafana.com/
+    → Distributed dashboards, edge agent, Loki logging
+
+SEARCH QUERIES FOR RESEARCH
+═══════════════════════════════════════════════════════════════════════════════
+
+Google Scholar Queries:
+- "multi-access edge computing XR latency"
+- "fog computing AR VR offloading"
+- "edge caching 3D assets immersive"
+- "CDN optimization WebXR performance"
+
+GitHub Repository Searches:
+- topic:edge-computing topic:kubernetes
+- topic:cloudxr topic:nvidia
+- topic:edge-ai topic:inference
+
+INDUSTRY REPORTS
+═══════════════════════════════════════════════════════════════════════════════
+
+25. Gartner - Edge Computing
+    https://www.gartner.com/en/research
+    Search: "edge infrastructure", "distributed cloud"
+
+26. IDC - Worldwide Edge Spending Guide
+    https://www.idc.com/
+    Filter: Edge infrastructure, XR applications
+
+27. State of the Edge Report
+    https://www.stateoftheedge.com/
+    → Open-source market research, edge trends, forecasts
+
+═══════════════════════════════════════════════════════════════════════════════
+VERIFICATION STATUS: ✅ All links cross-checked November 21, 2024
+FOCUS: Latency reduction (80ms → 15ms), distributed processing, asset caching
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,10 @@
+1. EU AI Act (Official Text) - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689
+2. NIST AI Risk Management Framework - https://www.nist.gov/itl/ai-risk-management-framework
+3. White House Office of Science and Technology Policy - https://www.whitehouse.gov/ostp/
+4. OECD AI Principles - https://oecd.ai/en/
+5. World Economic Forum: AI and Robotics - https://www.weforum.org/topics/artificial-intelligence-and-robotics
+6. UK National AI Strategy - https://www.gov.uk/government/publications/national-ai-strategy
+7. UNESCO Ethics of AI - https://www.unesco.org/en/artificial-intelligence/recommendation-ethics
+8. IEEE Ethics of Autonomous Systems - https://standards.ieee.org/industry-connections/ec/autonomous-systems.html
+9. Future of Life Institute - https://futureoflife.org/
+10. Center for Human-Compatible AI - https://humancompatible.ai/

@@ -1,0 +1,9 @@
+{
+  "raw_txt": "/mnt/data/xr_present_state_maturity_outputs/XR_present_state_VERBATIM_raw.txt",
+  "corpus_txt": "/mnt/data/xr_present_state_maturity_outputs/XR_present_state_corpus.txt",
+  "wordcloud_png": "/mnt/data/xr_present_state_maturity_outputs/xr_wordcloud.png",
+  "sentiment_csv": "/mnt/data/xr_present_state_maturity_outputs/xr_sentences_sentiment.csv",
+  "sentiment_plot": "/mnt/data/xr_present_state_maturity_outputs/xr_sentiment_distribution.png",
+  "topics_txt": "/mnt/data/xr_present_state_maturity_outputs/xr_topics.txt",
+  "script": "/mnt/data/xr_present_state_maturity_outputs/xr_analysis_script.py"
+}

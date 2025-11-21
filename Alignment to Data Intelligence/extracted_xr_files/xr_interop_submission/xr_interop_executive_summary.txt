@@ -1,0 +1,27 @@
+XR — Interoperability: Executive Summary
+
+Objective:
+Assess social-data signals on XR interoperability (APIs, OpenXR, middleware, hardware compatibility, security, performance).
+
+Data:
+Source corpus: 19 cleaned text entries harvested from the provided webpages and developer/research sources.
+
+Key social signals:
+- Top terms: xr, cros, openxr, interoperability, standard, platform, interoperable, device, system, developer
+- Sentiment snapshot: 10 positive, 9 neutral, 0 negative mentions
+- Primary topic clusters (top term per topic): android;enterprise;xr;industry;community
+
+Managerial recommendations (high level):
+1) Run targeted middleware pilots to reduce integration risk.
+2) Participate in standards work and engage with key consortia.
+3) Add interoperability scorecard to procurement.
+4) Ensure security and edge compute considerations in pilots.
+
+Deliverables produced and saved in /mnt/data:
+- xr_interop_clean.csv
+- xr_interop_wordcloud.png and xr_interop_wordcloud_top_terms.csv
+- xr_interop_sentiment_output.csv and xr_interop_sentiment_summary.csv
+- xr_interop_topics.json and xr_interop_doc_dominant_topic.csv
+- xr_interop_integration_summary.csv
+- xr_interop_managerial_implications.txt
+- xr_interop_executive_summary.txt
