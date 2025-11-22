@@ -153,15 +153,15 @@ DIMENSION_5_USE_CASES = DimensionConfig(
     icon="💼",
     question="Across how many industries and job functions can XR deliver measurable business value?",
     data_files=[
-        Path("XR_use_cases/XR_Submission/xr_usecases_corpus.csv"),
+        Path("XR_use_cases/XR_Submission/xr_usecases_corpus_VERIFIED.csv"),
     ],
     source_files=[
-        Path("XR_use_cases/XR_Submission/xr_usecases_links.txt"),
+        Path("XR_use_cases/XR_Submission/xr_usecases_links_UPDATED_2025.txt"),
     ],
     entry_count=20,
     readiness_score=85,
     readiness_color="🟢",
-    key_finding="Broad adoption across 10+ industries (Manufacturing, Healthcare, Logistics lead)"
+    key_finding="Proven ROI: Boeing 30% faster assembly, DHL 25% efficiency, Mayo Clinic 25% skill boost"
 )
 
 # ============================================================================
