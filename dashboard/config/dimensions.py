@@ -62,10 +62,10 @@ DIMENSION_1_MATURITY = DimensionConfig(
     source_files=[
         # Text-based sources, no explicit URL file
     ],
-    entry_count=100,
-    readiness_score=80,
-    readiness_color="🟢",
-    key_finding="Enterprise-ready with clear market leaders (Meta, Microsoft, Varjo)"
+    entry_count=39,
+    readiness_score=75,
+    readiness_color="🟡",
+    key_finding="Enterprise pilot stage with established vendors (Meta Quest 3, Vision Pro), but mainstream adoption pending"
 )
 
 # ============================================================================
@@ -86,10 +86,10 @@ DIMENSION_2_INTEROP = DimensionConfig(
     source_files=[
         # URLs are embedded in xr_interop_raw.csv (source_url column)
     ],
-    entry_count=20,
+    entry_count=19,
     readiness_score=70,
     readiness_color="🟡",
-    key_finding="Improving standards (OpenXR 70% adoption), but platform fragmentation persists"
+    key_finding="OpenXR adoption growing (70%+ support), but cross-platform challenges remain across runtimes"
 )
 
 # ============================================================================
@@ -99,7 +99,7 @@ DIMENSION_3_SCALABILITY = DimensionConfig(
     id="scalability",
     name="Scalability",
     purpose="Capacity to deliver enterprise-grade solutions",
-    icon="📈",
+    icon="⚡",
     question="Can XR infrastructure scale from 10 users to 10,000 users without performance degradation?",
     data_files=[
         Path("XR scalability/XR_01_5G_6G_Connectivity_Data.csv"),
@@ -112,12 +112,16 @@ DIMENSION_3_SCALABILITY = DimensionConfig(
         Path("XR scalability/XR_LDA_Topic_Distribution.csv"),
     ],
     source_files=[
-        # URLs are embedded in each CSV file (source_url column)
+        Path("XR scalability/XR_07_Sources_5G_6G_Connectivity.txt"),
+        Path("XR scalability/XR_08_Sources_Edge_Computing.txt"),
+        Path("XR scalability/XR_09_Sources_Cloud_Rendering.txt"),
+        Path("XR scalability/XR_10_Sources_Mobile_Device_Management.txt"),
+        Path("XR scalability/XR_11_Sources_Infrastructure_Scaling.txt"),
     ],
     entry_count=600,
-    readiness_score=90,
+    readiness_score=85,
     readiness_color="🟢",
-    key_finding="Infrastructure ready for large-scale deployment (5G/6G, edge, cloud rendering)"
+    key_finding="Infrastructure ready with 5G/edge computing (145 verified sources), cloud rendering enables scale"
 )
 
 # ============================================================================
@@ -132,15 +136,20 @@ DIMENSION_4_AI_ALIGNMENT = DimensionConfig(
     data_files=[
         Path("Alignment to Data Intelligence/XR_Integrated_Master_Corpus.csv"),
         Path("Alignment to Data Intelligence/XR_Cleaned_Data.csv"),
-        Path("Alignment to Data Intelligence/XR_Research_Papers_Data.csv"),
+        Path("Alignment to Data Intelligence/xr_ai_alignment_sentiment.csv"),
+        Path("Alignment to Data Intelligence/xr_ai_alignment_topics.csv"),
     ],
     source_files=[
-        # Mixed sources in master corpus
+        Path("Alignment to Data Intelligence/Sources_Tech_Blogs.txt"),
+        Path("Alignment to Data Intelligence/Sources_Social_Media.txt"),
+        Path("Alignment to Data Intelligence/Sources_Research_Forums.txt"),
+        Path("Alignment to Data Intelligence/Sources_Policy_Briefs.txt"),
+        Path("Alignment to Data Intelligence/Sources_Professional_Networks.txt"),
     ],
-    entry_count=200,
-    readiness_score=60,
+    entry_count=65,
+    readiness_score=65,
     readiness_color="🟡",
-    key_finding="Strong convergence in digital twins & spatial AI (60% of advanced use cases)"
+    key_finding="Emerging convergence: World models & digital twins dominate AI-XR integration (55% positive sentiment)"
 )
 
 # ============================================================================
@@ -205,10 +214,10 @@ ANALYTICAL_FRAMEWORK = {
         }
     ],
     "data_quality": {
-        "total_verified_urls": 591,
+        "total_verified_urls": 290,
         "verification_status": "All URLs tested: 200 OK (no 404 errors)",
-        "publication_period": "2023-2024",
-        "source_types": "Technical documentation, case studies, thought leadership"
+        "publication_period": "2023-2025",
+        "source_types": "Technical blogs, research papers, professional networks, policy briefs, social media"
     }
 }
 
@@ -270,7 +279,7 @@ def get_data_summary() -> Dict:
     return {
         "total_dimensions": len(ALL_DIMENSIONS),
         "total_entries": sum(dim.entry_count for dim in ALL_DIMENSIONS),
-        "total_verified_urls": 591,
+        "total_verified_urls": 290,
         "dimensions": [
             {
                 "name": dim.name,
