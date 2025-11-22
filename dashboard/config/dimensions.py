@@ -206,7 +206,7 @@ ANALYTICAL_FRAMEWORK = {
         },
         {
             "name": "Sentiment Analysis",
-            "description": "Quantifying public attitude (optimism, skepticism, controversy)"
+            "description": "VADER-based sentiment scoring to quantify public attitude (optimism, skepticism, controversy)"
         },
         {
             "name": "Topic Modelling (LDA)",
