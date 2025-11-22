@@ -363,7 +363,7 @@ with st.sidebar:
 
     st.markdown("---")
     st.caption("Data updated: 2024-2025")
-    st.caption("Sources: 591 verified URLs")
+    st.caption("Sources: 254 verified URLs")
 
 # ============================================================================
 # MAIN CONTENT - EXECUTIVE CONTEXT
@@ -628,6 +628,6 @@ st.markdown("""
 <div style='text-align: center; color: #6C757D; padding: 20px;'>
     <p><strong>XR Technology Readiness Dashboard</strong></p>
     <p>Analytical Framework for Strategic Technology Assessment</p>
-    <p>Data Sources: 591 Verified URLs | Analysis Period: 2020-2025</p>
+    <p>Data Sources: 254 Verified URLs | Analysis Period: 2020-2025</p>
 </div>
 """, unsafe_allow_html=True)

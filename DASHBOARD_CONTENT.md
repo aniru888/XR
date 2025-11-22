@@ -26,10 +26,10 @@ This document shows exactly what appears on each page of the Streamlit dashboard
 
 ### Leadership Perspective
 
-**📚 Azeem Azhar's Vision:**
+**📚 Azeem's Vision:**
 > "The exponential age demands that businesses adopt technologies that fundamentally reshape operations, not just incrementally improve them."
 
-**🤖 Ananya Srivastava's Framework:**
+**🤖 Ananya's Framework:**
 > "AI-native enterprises must evaluate technologies through multiple lenses: maturity, compatibility, scalability, and strategic alignment."
 
 ### Analytical Methodology
@@ -56,8 +56,8 @@ This document shows exactly what appears on each page of the Streamlit dashboard
 
 **Metrics:**
 - Dimensions Analyzed: 5
-- Total Entries: 940
-- Verified URLs: 591 (Real articles, not homepages)
+- Total Entries: 861
+- Verified URLs: 254 (Real articles, not homepages)
 - Data Period: 2020-2025
 
 **Quality Badge:** ✓ All URLs Verified | ✓ Real Articles | ✓ No Synthetic Data
@@ -537,7 +537,7 @@ With 77% overall readiness and proven ROI in manufacturing, healthcare, and fiel
 - ✅ Word cloud visualizations on every dimension
 - ✅ Sentiment analysis charts
 - ✅ Topic modeling (LDA) results
-- ✅ 591 verified source URLs (all clickable)
+- ✅ 254 verified source URLs (all clickable)
 - ✅ Interactive data tables
 - ✅ Professional gradient styling
 - ✅ Export capability for data tables
@@ -546,6 +546,6 @@ With 77% overall readiness and proven ROI in manufacturing, healthcare, and fiel
 
 **Dashboard Generated:** 2025-11-21
 **Data Period:** 2020-2025
-**Sources:** 591 Verified URLs | 940 Data Entries
+**Sources:** 254 Verified URLs | 861 Data Entries
 **Framework:** Five-Dimension Analytical Framework
 **Status:** Production Ready

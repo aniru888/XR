@@ -499,6 +499,6 @@ st.markdown("""
 <div style='text-align: center; color: #6C757D; padding: 20px;'>
     <p><strong>Strategic Synthesis & Recommendations</strong></p>
     <p>XR Technology Readiness Dashboard - Five-Dimension Framework</p>
-    <p>Analysis based on 591 verified sources | 2020-2025 data period</p>
+    <p>Analysis based on 254 verified sources | 2020-2025 data period</p>
 </div>
 """, unsafe_allow_html=True)
