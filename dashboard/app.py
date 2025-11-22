@@ -481,7 +481,7 @@ with col1:
 with col2:
     st.markdown("""
     **😊 Sentiment Analysis**
-    - TextBlob polarity scoring
+    - VADER sentiment scoring
     - Positive/Neutral/Negative classification
     - Industry optimism assessment
     - Risk signal detection
