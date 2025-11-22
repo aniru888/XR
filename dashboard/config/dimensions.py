@@ -202,7 +202,7 @@ ANALYTICAL_FRAMEWORK = {
     "methodology": [
         {
             "name": "Word Cloud Analysis",
-            "description": "Using pre-trained NLP models to visualize dominant themes"
+            "description": "Statistical word frequency analysis to visualize dominant themes"
         },
         {
             "name": "Sentiment Analysis",

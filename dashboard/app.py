@@ -472,7 +472,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown("""
     **📊 Word Cloud Analysis**
-    - Pre-trained NLP models
+    - Statistical word frequency analysis
     - Identifies dominant themes
     - Visualizes key concepts
     - Highlights industry focus
