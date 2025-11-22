@@ -20,11 +20,32 @@ class TextPreprocessor:
     def __init__(self):
         """Initialize preprocessor with stopwords"""
         self.stopwords = set(STOPWORDS)
+
         # Add XR-specific stopwords
         self.stopwords.update([
             'will', 'use', 'using', 'used', 'one', 'two', 'three',
             'also', 'may', 'can', 'could', 'would', 'should',
-            'http', 'https', 'www', 'com', 'org', 'net'
+            'http', 'https', 'www', 'com', 'org', 'net', 'html'
+        ])
+
+        # Add metadata/source type stopwords
+        self.stopwords.update([
+            'blog', 'post', 'article', 'paper', 'study', 'research',
+            'report', 'whitepaper', 'document', 'publication',
+            'abstract', 'journal', 'news', 'newsroom', 'press',
+            'linkedin', 'twitter', 'facebook', 'social', 'media',
+            'professional', 'network', 'forum', 'reddit',
+            'google', 'scholar', 'microsoft', 'meta', 'facebook',
+            'developer', 'developers', 'insights', 'deloitte',
+            'pwc', 'gartner', 'forrester', 'idc', 'industry',
+            'case', 'source', 'sources', 'link', 'links', 'url'
+        ])
+
+        # Add generic filler words
+        self.stopwords.update([
+            'said', 'says', 'saying', 'according', 'stated',
+            'announced', 'announced', 'released', 'launched',
+            'introduced', 'presented', 'published', 'reported'
         ])
 
     def clean_text(self, text: str) -> str:
@@ -33,8 +54,11 @@ class TextPreprocessor:
             return ""
 
         text = str(text).lower()
-        # Remove URLs
-        text = re.sub(r'http\S+|www\S+', '', text)
+        # Remove URLs more comprehensively
+        text = re.sub(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', '', text)
+        text = re.sub(r'www\.[a-zA-Z0-9\-\.]+\.[a-z]{2,}', '', text)
+        # Remove email addresses
+        text = re.sub(r'\S+@\S+', '', text)
         # Remove special characters but keep spaces
         text = re.sub(r'[^a-zA-Z\s]', ' ', text)
         # Remove extra whitespace
@@ -44,6 +68,7 @@ class TextPreprocessor:
     def remove_stopwords(self, text: str) -> str:
         """Remove stopwords from text"""
         words = text.split()
+        # Filter out stopwords and very short words (< 3 chars)
         filtered = [w for w in words if w not in self.stopwords and len(w) > 2]
         return ' '.join(filtered)
 
