@@ -101,11 +101,24 @@ st.markdown(f"""
 
 st.markdown("## 📊 Text Analytics")
 
-if text and len(text.strip()) > 100:
+# Load pre-computed analytics from data files
+analytics_path = dimension.get_data_paths()[0].parent  # xr_interop_submission directory
+sentiment_file = analytics_path / "xr_interop_sentiment.csv"
+topics_file = analytics_path / "xr_interop_topics.csv"
+top_words_file = analytics_path / "xr_interop_top_words.csv"
+wordcloud_img = analytics_path / "xr_interop_wordcloud.png"
+sentiment_img = analytics_path / "xr_interop_sentiment_distribution.png"
 
-    # Word Cloud
-    st.markdown("### 📊 Word Cloud Analysis")
-    try:
+# Word Cloud
+st.markdown("### ☁️ Word Cloud Analysis")
+try:
+    if wordcloud_img.exists():
+        # Display pre-computed word cloud image
+        from PIL import Image
+        img = Image.open(wordcloud_img)
+        st.image(img, use_container_width=True, caption="Key Concepts in XR Interoperability")
+    else:
+        # Fallback to generating word cloud
         wc_gen = WordCloudGenerator(width=1200, height=600)
         wordcloud = wc_gen.generate(text, max_words=100, colormap='plasma')
 
@@ -116,64 +129,130 @@ if text and len(text.strip()) > 100:
         ax.set_title('Key Concepts in XR Interoperability', fontsize=16, fontweight='bold', pad=20)
         st.pyplot(fig)
 
-        col1, col2 = st.columns([2, 1])
-        with col1:
+    # Display top words table
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        if top_words_file.exists():
+            top_words_df = pd.read_csv(top_words_file)
+            st.dataframe(
+                top_words_df.head(20),
+                use_container_width=True,
+                hide_index=True,
+                column_config={
+                    "word": "Word",
+                    "frequency": st.column_config.NumberColumn("Frequency", format="%d")
+                }
+            )
+        else:
+            wc_gen = WordCloudGenerator()
             top_words = wc_gen.get_top_words(text, n=20)
             top_df = pd.DataFrame(top_words, columns=['Word', 'Frequency'])
             st.dataframe(top_df, use_container_width=True, hide_index=True)
 
+    with col2:
+        st.markdown("**Integration Focus:**")
+        if top_words_file.exists():
+            top_words_df = pd.read_csv(top_words_file)
+            if len(top_words_df) > 0:
+                st.markdown(f"- Top theme: **{top_words_df.iloc[0]['word']}**")
+        st.markdown("- Shows compatibility priorities")
+        st.markdown("- Highlights ecosystem gaps")
+except Exception as e:
+    st.warning(f"Word cloud visualization failed: {e}")
+
+# Sentiment Analysis
+st.markdown("---")
+st.markdown("### 😊 Sentiment Analysis")
+try:
+    if sentiment_file.exists():
+        # Load pre-computed sentiment results
+        sentiment_df = pd.read_csv(sentiment_file)
+
+        # Calculate summary statistics
+        avg_compound = sentiment_df['compound'].mean()
+        sentiment_counts = sentiment_df['label'].value_counts()
+        total = len(sentiment_df)
+
+        pos_pct = (sentiment_counts.get('positive', 0) / total) * 100
+        neu_pct = (sentiment_counts.get('neutral', 0) / total) * 100
+        neg_pct = (sentiment_counts.get('negative', 0) / total) * 100
+
+        # Display metrics
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.metric("Avg Sentiment", f"{avg_compound:.3f}")
         with col2:
-            st.markdown("**Integration Focus:**")
-            if top_words:
-                st.markdown(f"- Top theme: **{top_words[0][0]}**")
-                st.markdown("- Shows compatibility priorities")
-                st.markdown("- Highlights ecosystem gaps")
-    except Exception as e:
-        st.warning(f"Word cloud generation failed: {e}")
+            st.metric("Positive", f"{pos_pct:.1f}%",
+                     delta=f"{sentiment_counts.get('positive', 0)} sources",
+                     delta_color="off")
+        with col3:
+            st.metric("Neutral", f"{neu_pct:.1f}%",
+                     delta=f"{sentiment_counts.get('neutral', 0)} sources",
+                     delta_color="off")
+        with col4:
+            st.metric("Negative", f"{neg_pct:.1f}%",
+                     delta=f"{sentiment_counts.get('negative', 0)} sources",
+                     delta_color="off")
 
-    # Sentiment Analysis
-    st.markdown("---")
-    st.markdown("### 😊 Sentiment Analysis")
-    try:
-        sentences = [s.strip() for s in text.split('.') if len(s.strip()) > 20]
-        if len(sentences) >= 5:
-            analyzer = SentimentAnalyzer()
-            sentiments = analyzer.analyze_corpus(sentences)
-            summary = analyzer.get_summary_stats(sentiments)
+        # Display sentiment distribution chart
+        if sentiment_img.exists():
+            from PIL import Image
+            img = Image.open(sentiment_img)
+            st.image(img, use_container_width=True, caption="Sentiment Distribution Across Sources")
 
-            col1, col2, col3, col4 = st.columns(4)
-            with col1:
-                st.metric("Avg Polarity", f"{summary['avg_polarity']:.3f}")
-            with col2:
-                st.metric("Positive", f"{summary['positive_pct']:.1f}%")
-            with col3:
-                st.metric("Neutral", f"{summary['neutral_pct']:.1f}%")
-            with col4:
-                st.metric("Negative", f"{summary['negative_pct']:.1f}%")
+        # Show detailed sentiment breakdown
+        with st.expander("📊 View Detailed Sentiment Breakdown"):
+            display_df = sentiment_df[['platform', 'compound', 'label']].copy()
+            display_df.columns = ['Platform', 'Sentiment Score', 'Category']
+            st.dataframe(
+                display_df,
+                use_container_width=True,
+                hide_index=True,
+                column_config={
+                    "Sentiment Score": st.column_config.NumberColumn(
+                        "Sentiment Score",
+                        format="%.3f",
+                        help="Compound sentiment score (-1 to +1)"
+                    )
+                }
+            )
+    else:
+        st.info("Pre-computed sentiment analysis not available. Run generate_interop_analysis.py to create it.")
+except Exception as e:
+    st.warning(f"Sentiment analysis display failed: {e}")
 
-            fig = analyzer.plot_distribution(sentiments, title="Sentiment - Interoperability Challenges")
-            st.pyplot(fig)
-    except Exception as e:
-        st.warning(f"Sentiment analysis failed: {e}")
+# Topic Modeling
+st.markdown("---")
+st.markdown("### 🎯 Topic Modeling (LDA)")
+try:
+    if topics_file.exists():
+        # Load pre-computed topics
+        topics_df = pd.read_csv(topics_file)
 
-    # Topic Modeling
-    st.markdown("---")
-    st.markdown("### 🎯 Topic Modeling (LDA)")
-    try:
-        if len(sentences) >= 5:
-            n_topics = min(3, len(sentences) // 3)
-            modeler = TopicModeler(n_topics=n_topics)
-            modeler.fit(sentences)
-            labels = modeler.get_topic_labels(n_words=5)
+        st.markdown("**Key Integration Themes Identified:**")
+        st.markdown("")
 
-            st.markdown("**Integration Themes:**")
-            for topic_id, label in labels.items():
-                st.markdown(f"- {label}")
-    except Exception as e:
-        st.warning(f"Topic modeling failed: {e}")
+        for idx, row in topics_df.iterrows():
+            topic_num = idx + 1
+            keywords = row['keywords']
 
-else:
-    st.info("Limited text data available for analytics")
+            # Create colored topic boxes
+            st.markdown(f"""
+            <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                        padding: 15px; border-radius: 8px; border-left: 4px solid {COLORS['accent_teal']};
+                        margin: 10px 0;'>
+                <h4 style='margin: 0 0 8px 0; color: {COLORS["primary_blue"]};'>
+                    🔸 Topic {topic_num}
+                </h4>
+                <p style='margin: 0; color: #1a1a1a; font-size: 0.95em;'>
+                    <strong>Keywords:</strong> {keywords}
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+    else:
+        st.info("Pre-computed topic modeling not available. Run generate_interop_analysis.py to create it.")
+except Exception as e:
+    st.warning(f"Topic modeling display failed: {e}")
 
 # ============================================================================
 # DATA SOURCES
