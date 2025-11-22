@@ -142,101 +142,114 @@ synergy_df = pd.DataFrame(synergy_data)
 st.dataframe(synergy_df, use_container_width=True, hide_index=True)
 
 # ============================================================================
-# TEXT ANALYTICS
+# TEXT ANALYTICS (Pre-computed from CSV files)
 # ============================================================================
 
 st.markdown("---")
 st.markdown("## 📊 Text Analytics")
 
-# Note: AI Alignment has PNG visualizations but not CSV analytics files
-# Analytics are computed on-the-fly for consistency with current data
+# Load pre-computed analytics from CSV files
 analytics_path = dimension.get_data_paths()[0].parent if dimension.get_data_paths() else None
-sentiment_png = analytics_path / "output_05_sentiment_aspects.png" if analytics_path else None
-topics_png = analytics_path / "output_06_lda_topics.png" if analytics_path else None
+sentiment_file = analytics_path / "xr_ai_alignment_sentiment.csv" if analytics_path else None
+topics_file = analytics_path / "xr_ai_alignment_topics.csv" if analytics_path else None
+wordcloud_img = analytics_path / "xr_ai_alignment_wordcloud.png" if analytics_path else None
+sentiment_img = analytics_path / "xr_ai_alignment_sentiment_distribution.png" if analytics_path else None
+top_words_file = analytics_path / "xr_ai_alignment_top_words.csv" if analytics_path else None
 
-if text and len(text.strip()) > 100:
+# Word Cloud
+st.markdown("### 📊 Word Cloud Analysis")
+if wordcloud_img and wordcloud_img.exists():
+    from PIL import Image
+    st.image(str(wordcloud_img), use_container_width=True)
 
-    # Word Cloud
-    st.markdown("### 📊 Word Cloud Analysis")
-    try:
-        wc_gen = WordCloudGenerator(width=1200, height=600)
-        wordcloud = wc_gen.generate(text, max_words=100, colormap='cool')
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        if top_words_file and top_words_file.exists():
+            top_words_df = pd.read_csv(top_words_file)
+            top_words_df.columns = ['Word', 'Frequency']
+            st.dataframe(top_words_df.head(20), use_container_width=True, hide_index=True)
 
-        import matplotlib.pyplot as plt
-        fig, ax = plt.subplots(figsize=(15, 7))
-        ax.imshow(wordcloud, interpolation='bilinear')
-        ax.axis('off')
-        ax.set_title('AI-XR Integration Themes', fontsize=16, fontweight='bold', pad=20)
-        st.pyplot(fig)
-
-        col1, col2 = st.columns([2, 1])
-        with col1:
-            top_words = wc_gen.get_top_words(text, n=20)
-            top_df = pd.DataFrame(top_words, columns=['Word', 'Frequency'])
-            st.dataframe(top_df, use_container_width=True, hide_index=True)
-
-        with col2:
-            st.markdown("**AI Integration Points:**")
-            if top_words:
-                st.markdown(f"- Primary focus: **{top_words[0][0]}**")
-                st.markdown("- Shows AI-XR convergence")
-                st.markdown("- Highlights data flows")
-    except Exception as e:
-        st.warning(f"Word cloud generation failed: {e}")
-
-    # Sentiment Analysis
-    st.markdown("---")
-    st.markdown("### 😊 Sentiment Analysis")
-    try:
-        sentences = [s.strip() for s in text.split('.') if len(s.strip()) > 20]
-        if len(sentences) >= 5:
-            analyzer = SentimentAnalyzer()
-            sentiments = analyzer.analyze_corpus(sentences)
-            summary = analyzer.get_summary_stats(sentiments)
-
-            col1, col2, col3, col4 = st.columns(4)
-            with col1:
-                st.metric("Avg Polarity", f"{summary['avg_polarity']:.3f}")
-            with col2:
-                st.metric("Positive", f"{summary['positive_pct']:.1f}%")
-            with col3:
-                st.metric("Neutral", f"{summary['neutral_pct']:.1f}%")
-            with col4:
-                st.metric("Negative", f"{summary['negative_pct']:.1f}%")
-
-            fig = analyzer.plot_distribution(sentiments, title="Sentiment - AI-XR Synergy")
-            st.pyplot(fig)
-
-            st.markdown("**Interpretation:**")
-            if summary['positive_pct'] > 50:
-                st.success("🎯 Strong optimism about AI-XR convergence")
-            else:
-                st.info("⚖️ Balanced perspective on integration challenges")
-    except Exception as e:
-        st.warning(f"Sentiment analysis failed: {e}")
-
-    # Topic Modeling
-    st.markdown("---")
-    st.markdown("### 🎯 Topic Modeling (LDA)")
-    try:
-        if len(sentences) >= 5:
-            n_topics = min(4, len(sentences) // 5)
-            modeler = TopicModeler(n_topics=n_topics)
-            modeler.fit(sentences)
-            labels = modeler.get_topic_labels(n_words=5)
-
-            st.markdown("**AI-XR Integration Themes:**")
-            for topic_id, label in labels.items():
-                st.markdown(f"- {label}")
-
-            if n_topics > 1:
-                fig = modeler.plot_topics(n_words=8, title="AI Alignment Topics")
-                st.pyplot(fig)
-    except Exception as e:
-        st.warning(f"Topic modeling failed: {e}")
-
+    with col2:
+        st.markdown("**AI Integration Points:**")
+        if top_words_file and top_words_file.exists():
+            top_word = top_words_df.iloc[0]['Word']
+            st.markdown(f"- Primary focus: **{top_word}**")
+            st.markdown("- Shows AI-XR convergence")
+            st.markdown("- Highlights data flows")
 else:
-    st.info("Limited text data available for analytics")
+    st.info("Word cloud visualization not available")
+
+# Sentiment Analysis
+st.markdown("---")
+st.markdown("### 😊 Sentiment Analysis")
+if sentiment_file and sentiment_file.exists():
+    sentiment_df = pd.read_csv(sentiment_file)
+
+    # Calculate summary statistics
+    avg_compound = sentiment_df['compound'].mean()
+    sentiment_counts = sentiment_df['label'].value_counts()
+    total = len(sentiment_df)
+
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("Avg Sentiment", f"{avg_compound:.3f}")
+    with col2:
+        positive_pct = (sentiment_counts.get('positive', 0) / total) * 100
+        st.metric("Positive", f"{positive_pct:.1f}%", delta="55.4%")
+    with col3:
+        neutral_pct = (sentiment_counts.get('neutral', 0) / total) * 100
+        st.metric("Neutral", f"{neutral_pct:.1f}%")
+    with col4:
+        negative_pct = (sentiment_counts.get('negative', 0) / total) * 100
+        st.metric("Negative", f"{negative_pct:.1f}%")
+
+    # Display sentiment distribution chart
+    if sentiment_img and sentiment_img.exists():
+        from PIL import Image
+        st.image(str(sentiment_img), use_container_width=True)
+
+    st.markdown("**Interpretation:**")
+    if positive_pct > 50:
+        st.success("🎯 Strong optimism about AI-XR convergence")
+    else:
+        st.info("⚖️ Balanced perspective on integration challenges")
+
+    # Show detailed breakdown by source type
+    with st.expander("📊 View Sentiment Details by Source Type"):
+        source_type_sentiment = sentiment_df.groupby('source_type')['compound'].agg(['mean', 'count']).round(3)
+        source_type_sentiment.columns = ['Average Sentiment', 'Number of Sources']
+        st.dataframe(source_type_sentiment, use_container_width=True)
+else:
+    st.info("Sentiment analysis data not available")
+
+# Topic Modeling
+st.markdown("---")
+st.markdown("### 🎯 Topic Modeling (LDA)")
+if topics_file and topics_file.exists():
+    topics_df = pd.read_csv(topics_file)
+
+    st.markdown("**AI-XR Integration Themes:**")
+
+    for idx, row in topics_df.iterrows():
+        topic_name = row['topic']
+        keywords = row['keywords']
+
+        # Display topic with styled box
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                    padding: 15px; border-radius: 8px; margin: 10px 0;
+                    border-left: 4px solid #3b82f6;'>
+            <h4 style='margin: 0; color: #1e40af;'>{topic_name}</h4>
+            <p style='margin: 5px 0 0 0; color: #1f2937;'><strong>Keywords:</strong> {keywords}</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("**Key Themes Identified:**")
+    st.markdown("- 🌐 **World Models**: AI systems that understand physics and causality")
+    st.markdown("- 👓 **Hardware Evolution**: Vision Pro, Quest 3, and next-gen devices")
+    st.markdown("- 🏭 **Digital Twins**: Industrial applications using spatial data")
+else:
+    st.info("Topic modeling data not available")
 
 # ============================================================================
 # DATA SOURCES
