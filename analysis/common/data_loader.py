@@ -98,6 +98,8 @@ class XRDataLoader:
         Returns:
             List of verified article URLs
         """
+        import re
+
         dimension = get_dimension_by_id(dimension_id)
         if not dimension:
             return []
@@ -109,13 +111,10 @@ class XRDataLoader:
             if source_file.exists() and source_file.suffix == '.txt':
                 try:
                     with open(source_file, 'r', encoding='utf-8') as f:
-                        lines = f.readlines()
-                        # Skip header lines and extract URLs
-                        urls = [
-                            line.strip()
-                            for line in lines
-                            if line.strip().startswith('http')
-                        ]
+                        content = f.read()
+                        # Extract all URLs using regex pattern
+                        # Matches http:// or https:// followed by non-whitespace characters
+                        urls = re.findall(r'https?://[^\s]+', content)
                         sources.extend(urls)
                 except Exception as e:
                     print(f"⚠️  Error reading sources from {source_file}: {e}")
