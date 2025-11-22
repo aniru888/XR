@@ -1,0 +1,66 @@
+source,source_type,compound,pos,neu,neg,label
+https://www.washingtonpost.com/technology/2024/02/12/apple-vision-pro-review/,Blog,-0.1779,0.099,0.783,0.119,negative
+https://www.npr.org/2023/10/09/1204637576/meta-quest-3-review-vr-headset,Blog,0.9299,0.408,0.592,0.0,positive
+https://blogs.nvidia.com/blog/ai-digital-twins-industrial-automation-demo/,Blog,0.128,0.067,0.933,0.0,positive
+https://www.roadtovr.com/report-sony-psvr-2-pauses-production-low-sales/,Blog,-0.4023,0.0,0.856,0.144,negative
+https://www.cnbc.com/2024/10/02/nvidia-spatial-ai-the-omniverse-next-big-thing.html,Blog,0.0,0.0,1.0,0.0,neutral
+https://techcrunch.com/2023/09/22/unity-u-turns-on-controversial-runtime-fee-and-begs-forgiveness/,Blog,0.0387,0.166,0.673,0.161,neutral
+https://venturebeat.com/games/bmw-group-starts-global-rollout-of-nvidia-omniverse/,Blog,0.6249,0.242,0.758,0.0,positive
+https://www.cnbc.com/2024/06/03/microsoft-confirms-mixed-reality-layoffs-will-keep-selling-hololens-2.html,Blog,0.0,0.0,1.0,0.0,neutral
+https://techcrunch.com/2024/10/16/metas-ai-chief-says-world-models-are-key-to-human-level-ai-but-it-might-be-10-years-out/,Blog,0.0516,0.11,0.787,0.102,positive
+https://www.bloomberg.com/news/articles/2024-03-18/sony-hits-pause-on-psvr2-production-as-unsold-inventory-piles-up,Blog,0.0772,0.058,0.942,0.0,positive
+https://www.pcgamer.com/meta-quest-3-review/,Blog,0.4588,0.13,0.87,0.0,positive
+https://stratechery.com/2024/the-apple-vision-pro/,Blog,0.472,0.185,0.815,0.0,positive
+https://sixcolors.com/post/2024/02/apple-vision-pro-review-eyes-on-the-future/,Blog,0.34,0.167,0.833,0.0,positive
+https://www.xrtoday.com/reviews/meta-quest-3-review-hands-on-with-the-quest-3/,Blog,0.0,0.0,1.0,0.0,neutral
+https://www.xrtoday.com/mixed-reality/microsoft-retains-hololens-2-commitment-in-2024/,Blog,0.2732,0.116,0.884,0.0,positive
+https://www.ibm.com/think/news/world-models-smarter-ai,Blog,0.0,0.091,0.817,0.091,neutral
+https://blogs.nvidia.com/blog/nvidia-bmw-factory-future/,Blog,0.0,0.0,1.0,0.0,neutral
+https://www.techpowerup.com/327285/microsoft-discontinues-hololens-2-shifts-mixed-reality-strategy,Blog,0.4019,0.124,0.876,0.0,positive
+https://www.androidcentral.com/gaming/virtual-reality/meta-quest-3-review,Blog,0.7574,0.329,0.562,0.108,positive
+https://www.tomsguide.com/computing/smart-glasses/apple-vision-pro-review,Blog,0.296,0.294,0.582,0.124,positive
+https://www.nvidia.com/en-us/omniverse/,Professional Network,0.5994,0.259,0.741,0.0,positive
+https://developer.apple.com/visionos/,Professional Network,0.128,0.081,0.919,0.0,positive
+https://ai.meta.com/,Professional Network,0.0,0.0,1.0,0.0,neutral
+https://www.meta.com/quest/,Professional Network,0.0,0.0,1.0,0.0,neutral
+https://www.digitaltwinconsortium.org/,Professional Network,0.0,0.0,1.0,0.0,neutral
+https://www.awexr.com/,Professional Network,0.0,0.0,1.0,0.0,neutral
+https://unity.com/,Professional Network,-0.1027,0.15,0.636,0.214,negative
+https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights,Professional Network,0.25,0.143,0.857,0.0,positive
+https://www.gartner.com/en/information-technology,Professional Network,0.0,0.0,1.0,0.0,neutral
+https://www.ros.org/,Professional Network,0.0,0.0,1.0,0.0,neutral
+https://www.khronos.org/,Professional Network,-0.5267,0.0,0.779,0.221,negative
+https://developer.apple.com/visionos/,Professional Network,0.7003,0.309,0.691,0.0,positive
+https://ai.meta.com/,Professional Network,0.34,0.156,0.844,0.0,positive
+https://www.ericsson.com/en/reports-and-papers/consumerlab,Professional Network,0.4404,0.225,0.775,0.0,positive
+https://www.digitaltwinconsortium.org/,Professional Network,0.0,0.0,1.0,0.0,neutral
+https://dl.acm.org/doi/10.1145/3652595,Research Paper,0.25,0.087,0.913,0.0,positive
+https://research.google/blog/augmented-object-intelligence-with-xr-objects/,Research Paper,0.0,0.0,1.0,0.0,neutral
+https://ieeevr.org/2024/program/papers/,Research Paper,0.3182,0.095,0.905,0.0,positive
+https://dl.acm.org/doi/10.1145/3664475.3664543,Research Paper,0.25,0.111,0.889,0.0,positive
+https://dl.acm.org/doi/10.1145/3641233.3664727,Research Paper,0.4767,0.215,0.785,0.0,positive
+https://arxiv.org/abs/2412.12681,Research Paper,0.4767,0.181,0.819,0.0,positive
+https://www.ericsson.com/en/reports-and-papers/consumerlab/reports/augmented-tomorrow-ar-experiences-beyond-smartphones-and-ar-filters,Research Paper,0.0,0.0,1.0,0.0,neutral
+https://arxiv.org/abs/2410.23803,Research Paper,0.2732,0.123,0.877,0.0,positive
+https://www.ieee-smart-world.org/2024/digitaltwin/,Research Paper,0.4939,0.208,0.792,0.0,positive
+https://arxiv.org/abs/2504.06461,Research Paper,-0.4215,0.0,0.851,0.149,negative
+https://xr.jmir.org/2025/1/e66222,Research Paper,0.0,0.0,1.0,0.0,neutral
+https://link.springer.com/article/10.1007/s11704-025-41123-8,Research Paper,0.3612,0.161,0.839,0.0,positive
+https://arxiv.org/abs/2509.03812,Research Paper,0.3818,0.148,0.852,0.0,positive
+https://arxiv.org/abs/2504.13849,Research Paper,0.5106,0.223,0.777,0.0,positive
+https://arxiv.org/abs/2412.17490,Research Paper,0.25,0.133,0.867,0.0,positive
+https://twitter.com/ow,Social Media,-0.7543,0.07,0.653,0.277,negative
+https://twitter.com/ylecun,Social Media,0.0,0.0,1.0,0.0,neutral
+https://twitter.com/nvidia,Social Media,0.0,0.0,1.0,0.0,neutral
+https://twitter.com/Meta,Social Media,0.0,0.0,1.0,0.0,neutral
+https://twitter.com/karpathy,Social Media,0.0,0.0,1.0,0.0,neutral
+https://twitter.com/benedictevans,Social Media,0.4404,0.206,0.794,0.0,positive
+https://twitter.com/sama,Social Media,0.0,0.0,1.0,0.0,neutral
+https://twitter.com/scobleizer,Social Media,0.5719,0.239,0.761,0.0,positive
+https://twitter.com/ballmatthew,Social Media,0.3818,0.157,0.843,0.0,positive
+https://twitter.com/emollick,Social Media,0.5256,0.184,0.816,0.0,positive
+https://twitter.com/ID_AA_Carmack,Social Media,0.0772,0.071,0.929,0.0,positive
+https://twitter.com/hardmaru,Social Media,0.0,0.0,1.0,0.0,neutral
+https://twitter.com/Apple,Social Media,0.0,0.0,1.0,0.0,neutral
+https://twitter.com/unity,Social Media,0.2732,0.139,0.861,0.0,positive
+https://twitter.com/UnrealEngine,Social Media,0.3804,0.166,0.834,0.0,positive
