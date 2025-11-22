@@ -51,7 +51,7 @@ dashboard/
 
 ### Landing Page (Executive Context)
 - Five-dimension framework overview
-- Leadership perspective (Azeem Azhar, Ananya Srivastava)
+- Leadership perspective (Azeem, Ananya)
 - Analytical methodology (Word Cloud, Sentiment, Topic Modeling)
 - Data quality metrics and verification status
 
@@ -77,10 +77,10 @@ Each dimension page includes:
 
 ## 📚 Data Sources
 
-- **Total Verified URLs:** 591 real articles (not homepages)
+- **Total Verified URLs:** 254 real articles (not homepages)
 - **Data Period:** 2020-2025
 - **Verification Status:** All URLs return 200 OK status
-- **Total Entries:** 940+ data points across 5 dimensions
+- **Total Entries:** 861 data points across 5 dimensions
 
 ## 🎨 Design Principles
 
@@ -169,7 +169,7 @@ Internal use for strategic technology assessment.
 
 ## 👥 Authors
 
-- Analytical Framework: Based on Azeem Azhar's "Exponential Age" and Ananya Srivastava's AI-native enterprise framework
+- Analytical Framework: Based on Azeem's "Exponential Age" and Ananya's AI-native enterprise framework
 - Dashboard Implementation: 2024-2025
 
 ---

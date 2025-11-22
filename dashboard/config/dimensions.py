@@ -202,11 +202,11 @@ ANALYTICAL_FRAMEWORK = {
     "methodology": [
         {
             "name": "Word Cloud Analysis",
-            "description": "Using pre-trained NLP models to visualize dominant themes"
+            "description": "Statistical word frequency analysis to visualize dominant themes"
         },
         {
             "name": "Sentiment Analysis",
-            "description": "Quantifying public attitude (optimism, skepticism, controversy)"
+            "description": "VADER-based sentiment scoring to quantify public attitude (optimism, skepticism, controversy)"
         },
         {
             "name": "Topic Modelling (LDA)",
@@ -214,7 +214,7 @@ ANALYTICAL_FRAMEWORK = {
         }
     ],
     "data_quality": {
-        "total_verified_urls": 268,
+        "total_verified_urls": 254,
         "verification_status": "All URLs tested: 200 OK (no 404 errors)",
         "publication_period": "2023-2025",
         "source_types": "Market research reports, technical blogs, research papers, professional networks, policy briefs, social media"
@@ -279,7 +279,7 @@ def get_data_summary() -> Dict:
     return {
         "total_dimensions": len(ALL_DIMENSIONS),
         "total_entries": sum(dim.entry_count for dim in ALL_DIMENSIONS),
-        "total_verified_urls": 268,
+        "total_verified_urls": 254,
         "dimensions": [
             {
                 "name": dim.name,
