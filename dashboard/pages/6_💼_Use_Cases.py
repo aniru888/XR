@@ -167,6 +167,11 @@ st.dataframe(use_case_df, use_container_width=True, hide_index=True)
 st.markdown("---")
 st.markdown("## 📊 Text Analytics")
 
+# Load pre-computed analytics from data files
+analytics_path = dimension.get_data_paths()[0].parent  # XR_Submission directory
+sentiment_file = analytics_path / "xr_sentiment_output.csv"
+topics_file = analytics_path / "xr_topics.json"
+
 if text and len(text.strip()) > 100:
 
     # Word Cloud
@@ -201,64 +206,101 @@ if text and len(text.strip()) > 100:
     st.markdown("---")
     st.markdown("### 😊 Sentiment Analysis")
     try:
-        sentences = [s.strip() for s in text.split('.') if len(s.strip()) > 20]
-        if len(sentences) >= 5:
-            analyzer = SentimentAnalyzer()
-            sentiments = analyzer.analyze_corpus(sentences)
-            summary = analyzer.get_summary_stats(sentiments)
+        if sentiment_file.exists():
+            # Load pre-computed sentiment results
+            sentiment_df = pd.read_csv(sentiment_file)
 
+            # Calculate summary statistics
+            avg_compound = sentiment_df['compound'].mean()
+            sentiment_counts = sentiment_df['label'].value_counts()
+            total = len(sentiment_df)
+
+            pos_pct = (sentiment_counts.get('positive', 0) / total) * 100
+            neu_pct = (sentiment_counts.get('neutral', 0) / total) * 100
+            neg_pct = (sentiment_counts.get('negative', 0) / total) * 100
+
+            # Display metrics
             col1, col2, col3, col4 = st.columns(4)
             with col1:
-                st.metric("Avg Polarity", f"{summary['avg_polarity']:.3f}")
+                st.metric("Avg Sentiment", f"{avg_compound:.3f}")
             with col2:
-                st.metric("Positive", f"{summary['positive_pct']:.1f}%")
+                st.metric("Positive", f"{pos_pct:.1f}%",
+                         delta=f"{sentiment_counts.get('positive', 0)} cases",
+                         delta_color="off")
             with col3:
-                st.metric("Neutral", f"{summary['neutral_pct']:.1f}%")
+                st.metric("Neutral", f"{neu_pct:.1f}%",
+                         delta=f"{sentiment_counts.get('neutral', 0)} cases",
+                         delta_color="off")
             with col4:
-                st.metric("Negative", f"{summary['negative_pct']:.1f}%")
+                st.metric("Negative", f"{neg_pct:.1f}%",
+                         delta=f"{sentiment_counts.get('negative', 0)} cases",
+                         delta_color="off")
 
-            fig = analyzer.plot_distribution(sentiments, title="Sentiment - Use Case Success")
-            st.pyplot(fig)
+            # Show detailed sentiment breakdown
+            with st.expander("📊 View Detailed Sentiment by Use Case"):
+                display_df = sentiment_df[['id', 'source', 'compound', 'label']].copy()
+                display_df.columns = ['ID', 'Source', 'Sentiment Score', 'Category']
+                st.dataframe(
+                    display_df,
+                    use_container_width=True,
+                    hide_index=True,
+                    column_config={
+                        "Sentiment Score": st.column_config.NumberColumn(
+                            "Sentiment Score",
+                            format="%.3f",
+                            help="Compound sentiment score (-1 to +1)"
+                        )
+                    }
+                )
 
             st.markdown("**Success Signal:**")
-            if summary['positive_pct'] > 40:
+            if pos_pct > 40:
                 st.success("🎯 High positive sentiment indicates successful deployments")
-            elif summary['negative_pct'] > 30:
+            elif neg_pct > 30:
                 st.warning("⚠️ Elevated negative sentiment suggests implementation challenges")
             else:
                 st.info("⚖️ Balanced sentiment reflects mixed results across use cases")
+        else:
+            st.info("Pre-computed sentiment analysis not available.")
     except Exception as e:
-        st.warning(f"Sentiment analysis failed: {e}")
+        st.warning(f"Sentiment analysis display failed: {e}")
 
     # Topic Modeling
     st.markdown("---")
     st.markdown("### 🎯 Topic Modeling (LDA)")
     try:
-        if len(sentences) >= 5:
-            n_topics = min(4, len(sentences) // 3)
-            modeler = TopicModeler(n_topics=n_topics)
-            modeler.fit(sentences)
-            labels = modeler.get_topic_labels(n_words=5)
+        if topics_file.exists():
+            # Load pre-computed topics from JSON
+            import json
+            with open(topics_file, 'r') as f:
+                topics_data = json.load(f)
 
-            col1, col2 = st.columns(2)
+            st.markdown("**Key Use Case Themes Identified:**")
+            st.markdown("")
 
-            with col1:
-                st.markdown("**Application Themes:**")
-                for topic_id, label in labels.items():
-                    st.markdown(f"- {label}")
+            # Display topics
+            for topic in topics_data[:5]:  # Show top 5 topics
+                topic_id = topic.get('topic_id', 0)
+                terms = topic.get('terms', [])
+                keywords = ', '.join(terms[:10]) if isinstance(terms, list) else str(terms)
 
-            with col2:
-                # Map themes to industries
-                st.markdown("**Industry Mapping:**")
-                st.markdown("- Manufacturing & Field Service")
-                st.markdown("- Healthcare & Education")
-                st.markdown("- Retail & Entertainment")
-
-            if n_topics > 1:
-                fig = modeler.plot_topics(n_words=8, title="Use Case Themes")
-                st.pyplot(fig)
+                # Create colored topic boxes
+                st.markdown(f"""
+                <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                            padding: 15px; border-radius: 8px; border-left: 4px solid {COLORS['accent_teal']};
+                            margin: 10px 0;'>
+                    <h4 style='margin: 0 0 8px 0; color: {COLORS["primary_blue"]};'>
+                        🔸 Topic {topic_id + 1}
+                    </h4>
+                    <p style='margin: 0; color: #1a1a1a; font-size: 0.95em;'>
+                        <strong>Keywords:</strong> {keywords}
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+        else:
+            st.info("Pre-computed topic modeling not available.")
     except Exception as e:
-        st.warning(f"Topic modeling failed: {e}")
+        st.warning(f"Topic modeling display failed: {e}")
 
 else:
     st.info("Limited text data available for analytics")

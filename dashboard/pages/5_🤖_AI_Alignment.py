@@ -148,6 +148,12 @@ st.dataframe(synergy_df, use_container_width=True, hide_index=True)
 st.markdown("---")
 st.markdown("## 📊 Text Analytics")
 
+# Note: AI Alignment has PNG visualizations but not CSV analytics files
+# Analytics are computed on-the-fly for consistency with current data
+analytics_path = dimension.get_data_paths()[0].parent if dimension.get_data_paths() else None
+sentiment_png = analytics_path / "output_05_sentiment_aspects.png" if analytics_path else None
+topics_png = analytics_path / "output_06_lda_topics.png" if analytics_path else None
+
 if text and len(text.strip()) > 100:
 
     # Word Cloud

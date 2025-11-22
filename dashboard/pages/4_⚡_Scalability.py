@@ -148,6 +148,11 @@ st.dataframe(stack_df, use_container_width=True, hide_index=True)
 st.markdown("---")
 st.markdown("## 📊 Text Analytics")
 
+# Load pre-computed analytics from data files
+analytics_path = dimension.get_data_paths()[0].parent  # XR scalability directory
+sentiment_file = analytics_path / "XR_Sentiment_Analysis_Results.csv"
+topics_file = analytics_path / "XR_LDA_Topic_Distribution.csv"
+
 if text and len(text.strip()) > 100:
 
     # Word Cloud
@@ -182,46 +187,111 @@ if text and len(text.strip()) > 100:
     st.markdown("---")
     st.markdown("### 😊 Sentiment Analysis")
     try:
-        sentences = [s.strip() for s in text.split('.') if len(s.strip()) > 20]
-        if len(sentences) >= 5:
-            analyzer = SentimentAnalyzer()
-            sentiments = analyzer.analyze_corpus(sentences[:200])  # Limit for performance
-            summary = analyzer.get_summary_stats(sentiments)
+        if sentiment_file.exists():
+            # Load pre-computed sentiment results
+            sentiment_df = pd.read_csv(sentiment_file)
 
+            # Calculate summary statistics from global_sentiment_score
+            avg_sentiment = sentiment_df['global_sentiment_score'].mean()
+            sentiment_counts = sentiment_df['global_sentiment_class'].value_counts()
+            total = len(sentiment_df)
+
+            pos_pct = (sentiment_counts.get('Positive', 0) / total) * 100
+            neu_pct = (sentiment_counts.get('Neutral', 0) / total) * 100
+            neg_pct = (sentiment_counts.get('Negative', 0) / total) * 100
+
+            # Display metrics
             col1, col2, col3, col4 = st.columns(4)
             with col1:
-                st.metric("Avg Polarity", f"{summary['avg_polarity']:.3f}")
+                st.metric("Avg Sentiment", f"{avg_sentiment:.3f}")
             with col2:
-                st.metric("Positive", f"{summary['positive_pct']:.1f}%")
+                st.metric("Positive", f"{pos_pct:.1f}%",
+                         delta=f"{sentiment_counts.get('Positive', 0)} records",
+                         delta_color="off")
             with col3:
-                st.metric("Neutral", f"{summary['neutral_pct']:.1f}%")
+                st.metric("Neutral", f"{neu_pct:.1f}%",
+                         delta=f"{sentiment_counts.get('Neutral', 0)} records",
+                         delta_color="off")
             with col4:
-                st.metric("Negative", f"{summary['negative_pct']:.1f}%")
+                st.metric("Negative", f"{neg_pct:.1f}%",
+                         delta=f"{sentiment_counts.get('Negative', 0)} records",
+                         delta_color="off")
 
-            fig = analyzer.plot_distribution(sentiments, title="Sentiment - Scalability Outlook")
-            st.pyplot(fig)
+            # Show detailed sentiment breakdown
+            with st.expander("📊 View Detailed Sentiment by Infrastructure Layer"):
+                display_df = sentiment_df[['aspect', 'category', 'global_sentiment_score', 'global_sentiment_class']].copy()
+                display_df.columns = ['Aspect', 'Category', 'Sentiment Score', 'Classification']
+                st.dataframe(
+                    display_df.head(50),
+                    use_container_width=True,
+                    hide_index=True,
+                    column_config={
+                        "Sentiment Score": st.column_config.NumberColumn(
+                            "Sentiment Score",
+                            format="%.3f",
+                            help="Compound sentiment score (-1 to +1)"
+                        )
+                    }
+                )
+        else:
+            st.info("Pre-computed sentiment analysis not available.")
     except Exception as e:
-        st.warning(f"Sentiment analysis failed: {e}")
+        st.warning(f"Sentiment analysis display failed: {e}")
 
     # Topic Modeling
     st.markdown("---")
     st.markdown("### 🎯 Topic Modeling (LDA)")
     try:
-        if len(sentences) >= 10:
-            n_topics = 5  # 5 infrastructure layers
-            modeler = TopicModeler(n_topics=n_topics)
-            modeler.fit(sentences[:200])  # Limit for performance
-            labels = modeler.get_topic_labels(n_words=5)
+        if topics_file.exists():
+            # Load pre-computed topic distribution
+            lda_df = pd.read_csv(topics_file)
 
-            st.markdown("**Infrastructure Themes:**")
-            for topic_id, label in labels.items():
-                st.markdown(f"- {label}")
+            st.markdown("**Infrastructure Layer Topics:**")
+            st.markdown("")
 
-            if n_topics > 1:
-                fig = modeler.plot_topics(n_words=8, title="Scalability Infrastructure Themes")
-                st.pyplot(fig)
+            # Display topic distribution summary
+            topic_cols = [col for col in lda_df.columns if col.startswith('Topic_')]
+            if topic_cols:
+                # Calculate average distribution across all documents
+                topic_avgs = {}
+                for col in topic_cols:
+                    topic_avgs[col] = lda_df[col].mean()
+
+                # Create topic boxes with distribution
+                topic_names = {
+                    'Topic_1': '5G/6G Connectivity & Network',
+                    'Topic_2': 'Edge Computing & Processing',
+                    'Topic_3': 'Cloud Rendering & Streaming'
+                }
+
+                for i, (topic_col, avg_prob) in enumerate(sorted(topic_avgs.items(), key=lambda x: x[1], reverse=True)[:3], 1):
+                    topic_name = topic_names.get(topic_col, f"Infrastructure Theme {i}")
+                    prob_pct = avg_prob * 100
+
+                    st.markdown(f"""
+                    <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                                padding: 15px; border-radius: 8px; border-left: 4px solid {COLORS['accent_teal']};
+                                margin: 10px 0;'>
+                        <h4 style='margin: 0 0 8px 0; color: {COLORS["primary_blue"]};'>
+                            🔸 {topic_name}
+                        </h4>
+                        <p style='margin: 0; color: #1a1a1a; font-size: 0.95em;'>
+                            <strong>Document Coverage:</strong> {prob_pct:.1f}% average
+                        </p>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+                # Show distribution table
+                with st.expander("📊 View Topic Distribution Details"):
+                    st.dataframe(
+                        lda_df[topic_cols].head(20),
+                        use_container_width=True,
+                        column_config={col: st.column_config.NumberColumn(col, format="%.3f") for col in topic_cols}
+                    )
+        else:
+            st.info("Pre-computed topic modeling not available.")
     except Exception as e:
-        st.warning(f"Topic modeling failed: {e}")
+        st.warning(f"Topic modeling display failed: {e}")
 
 else:
     st.info("Limited text data available for analytics")

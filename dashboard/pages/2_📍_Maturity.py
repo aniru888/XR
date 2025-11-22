@@ -119,6 +119,11 @@ st.markdown(f"""
 
 st.markdown("## 📊 Text Analytics")
 
+# Load pre-computed analytics from data files
+analytics_path = dimension.get_data_paths()[0].parent  # xr_present_state_maturity_outputs directory
+sentiment_file = analytics_path / "xr_sentences_sentiment.csv"
+topics_file = analytics_path / "xr_topics.csv"
+
 # Only run analytics if we have text data
 if text and len(text.strip()) > 100:
 
@@ -174,63 +179,88 @@ if text and len(text.strip()) > 100:
     st.markdown("*Assesses industry optimism and outlook*")
 
     try:
-        # Split text into sentences for better sentiment analysis
-        sentences = [s.strip() for s in text.split('.') if len(s.strip()) > 20]
+        if sentiment_file.exists():
+            # Load pre-computed sentiment results
+            sentiment_df = pd.read_csv(sentiment_file)
 
-        if len(sentences) >= 5:
-            analyzer = SentimentAnalyzer()
-            sentiments = analyzer.analyze_corpus(sentences)
-            summary = analyzer.get_summary_stats(sentiments)
+            # Calculate summary statistics
+            avg_compound = sentiment_df['compound'].mean()
+            sentiment_counts = sentiment_df['label'].value_counts()
+            total = len(sentiment_df)
 
-            # Metrics
+            pos_pct = (sentiment_counts.get('positive', 0) / total) * 100
+            neu_pct = (sentiment_counts.get('neutral', 0) / total) * 100
+            neg_pct = (sentiment_counts.get('negative', 0) / total) * 100
+
+            # Display metrics
             col1, col2, col3, col4 = st.columns(4)
 
             with col1:
                 st.metric(
-                    "Average Polarity",
-                    f"{summary['avg_polarity']:.3f}",
+                    "Average Sentiment",
+                    f"{avg_compound:.3f}",
                     help="Range: -1 (negative) to +1 (positive)"
                 )
 
             with col2:
                 st.metric(
                     "Positive",
-                    f"{summary['positive_pct']:.1f}%",
+                    f"{pos_pct:.1f}%",
+                    delta=f"{sentiment_counts.get('positive', 0)} sentences",
+                    delta_color="off",
                     help="Percentage of positive sentiment"
                 )
 
             with col3:
                 st.metric(
                     "Neutral",
-                    f"{summary['neutral_pct']:.1f}%",
+                    f"{neu_pct:.1f}%",
+                    delta=f"{sentiment_counts.get('neutral', 0)} sentences",
+                    delta_color="off",
                     help="Percentage of neutral sentiment"
                 )
 
             with col4:
                 st.metric(
                     "Negative",
-                    f"{summary['negative_pct']:.1f}%",
+                    f"{neg_pct:.1f}%",
+                    delta=f"{sentiment_counts.get('negative', 0)} sentences",
+                    delta_color="off",
                     help="Percentage of negative sentiment"
                 )
 
-            # Distribution chart
-            fig = analyzer.plot_distribution(sentiments, title="Sentiment Distribution - XR Maturity")
-            st.pyplot(fig)
+            # Show detailed sentiment breakdown
+            with st.expander("📊 View Detailed Sentiment Breakdown"):
+                display_df = sentiment_df[['sentence', 'compound', 'label']].copy()
+                display_df.columns = ['Sentence', 'Sentiment Score', 'Category']
+                # Truncate sentences for display
+                display_df['Sentence'] = display_df['Sentence'].str[:100] + '...'
+                st.dataframe(
+                    display_df,
+                    use_container_width=True,
+                    hide_index=True,
+                    column_config={
+                        "Sentiment Score": st.column_config.NumberColumn(
+                            "Sentiment Score",
+                            format="%.3f",
+                            help="Compound sentiment score (-1 to +1)"
+                        )
+                    }
+                )
 
             # Interpretation
             st.markdown("**Interpretation:**")
-            if summary['avg_polarity'] > 0.1:
+            if avg_compound > 0.1:
                 st.success("📈 Overall positive sentiment indicates industry optimism")
-            elif summary['avg_polarity'] < -0.1:
+            elif avg_compound < -0.1:
                 st.warning("📉 Overall negative sentiment suggests challenges or skepticism")
             else:
                 st.info("📊 Neutral sentiment indicates balanced, objective reporting")
-
         else:
-            st.info("Insufficient text for sentiment analysis")
+            st.info("Pre-computed sentiment analysis not available.")
 
     except Exception as e:
-        st.warning(f"Sentiment analysis failed: {e}")
+        st.warning(f"Sentiment analysis display failed: {e}")
 
     # ========================================================================
     # TOPIC MODELING
@@ -241,47 +271,35 @@ if text and len(text.strip()) > 100:
     st.markdown("*Discovers latent themes and patterns*")
 
     try:
-        # Need at least 5 documents
-        if len(sentences) >= 5:
-            n_topics = min(3, len(sentences) // 3)  # Adaptive topic count
+        if topics_file.exists():
+            # Load pre-computed topics
+            topics_df = pd.read_csv(topics_file)
 
-            modeler = TopicModeler(n_topics=n_topics, random_state=42)
-            modeler.fit(sentences, max_features=500)
+            st.markdown("**Key Maturity Themes Identified:**")
+            st.markdown("")
 
-            # Get topic labels
-            labels = modeler.get_topic_labels(n_words=5)
+            for idx, row in topics_df.iterrows():
+                topic_num = idx + 1
+                keywords = row['keywords']
 
-            col1, col2 = st.columns([1, 1])
-
-            with col1:
-                st.markdown("**Discovered Topics:**")
-                for topic_id, label in labels.items():
-                    st.markdown(f"- {label}")
-
-            with col2:
-                # Get top words for each topic
-                topics = modeler.get_top_words_per_topic(n_words=10)
-                topic_data = []
-                for topic_id, words in topics.items():
-                    top_5_words = ', '.join([w for w, _ in words[:5]])
-                    topic_data.append({
-                        'Topic': f"Theme {topic_id + 1}",
-                        'Top Keywords': top_5_words
-                    })
-
-                topic_df = pd.DataFrame(topic_data)
-                st.dataframe(topic_df, use_container_width=True, hide_index=True)
-
-            # Visualization
-            if n_topics > 1:
-                fig = modeler.plot_topics(n_words=10, title="Topic Themes - XR Maturity")
-                st.pyplot(fig)
-
+                # Create colored topic boxes
+                st.markdown(f"""
+                <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                            padding: 15px; border-radius: 8px; border-left: 4px solid {COLORS['accent_teal']};
+                            margin: 10px 0;'>
+                    <h4 style='margin: 0 0 8px 0; color: {COLORS["primary_blue"]};'>
+                        🔸 {row['topic']}
+                    </h4>
+                    <p style='margin: 0; color: #1a1a1a; font-size: 0.95em;'>
+                        <strong>Keywords:</strong> {keywords}
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
         else:
-            st.info("Insufficient text for topic modeling (need at least 5 documents)")
+            st.info("Pre-computed topic modeling not available.")
 
     except Exception as e:
-        st.warning(f"Topic modeling failed: {e}")
+        st.warning(f"Topic modeling display failed: {e}")
 
 else:
     st.info("Limited text data available for this dimension. Analytics require more text corpus.")
