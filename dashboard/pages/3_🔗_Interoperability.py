@@ -233,7 +233,7 @@ try:
         st.markdown("")
 
         for idx, row in topics_df.iterrows():
-            topic_num = idx + 1
+            topic_name = row['topic']
             keywords = row['keywords']
 
             # Create colored topic boxes
@@ -242,7 +242,7 @@ try:
                         padding: 15px; border-radius: 8px; border-left: 4px solid {COLORS['accent_teal']};
                         margin: 10px 0;'>
                 <h4 style='margin: 0 0 8px 0; color: {COLORS["primary_blue"]};'>
-                    🔸 Topic {topic_num}
+                    🔸 {topic_name}
                 </h4>
                 <p style='margin: 0; color: #1a1a1a; font-size: 0.95em;'>
                     <strong>Keywords:</strong> {keywords}
