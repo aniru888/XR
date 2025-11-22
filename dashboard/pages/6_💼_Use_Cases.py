@@ -297,7 +297,7 @@ if text and len(text.strip()) > 100:
 
             # Display topics
             for topic in topics_data[:5]:  # Show top 5 topics
-                topic_id = topic.get('topic_id', 0)
+                topic_name = topic.get('topic_name', f"Topic {topic.get('topic_id', 0) + 1}")
                 terms = topic.get('terms', [])
                 keywords = ', '.join(terms[:10]) if isinstance(terms, list) else str(terms)
 
@@ -307,7 +307,7 @@ if text and len(text.strip()) > 100:
                             padding: 15px; border-radius: 8px; border-left: 4px solid {COLORS['accent_teal']};
                             margin: 10px 0;'>
                     <h4 style='margin: 0 0 8px 0; color: {COLORS["primary_blue"]};'>
-                        🔸 Topic {topic_id + 1}
+                        🔸 {topic_name}
                     </h4>
                     <p style='margin: 0; color: #1a1a1a; font-size: 0.95em;'>
                         <strong>Keywords:</strong> {keywords}

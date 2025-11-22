@@ -1,6 +1,7 @@
 [
   {
     "topic_id": 0,
+    "topic_name": "Immersive Visualization & Remote Support",
     "terms": [
       "overlay",
       "support",
@@ -28,6 +29,7 @@
   },
   {
     "topic_id": 1,
+    "topic_name": "Real-Time 3D Models & Technical Adoption",
     "terms": [
       "real",
       "building",
@@ -55,6 +57,7 @@
   },
   {
     "topic_id": 2,
+    "topic_name": "Real Estate Tours & Interior Design",
     "terms": [
       "let",
       "interior",
@@ -82,6 +85,7 @@
   },
   {
     "topic_id": 3,
+    "topic_name": "Surgical Training & Engineering Collaboration",
     "terms": [
       "team",
       "collaboration",
@@ -109,6 +113,7 @@
   },
   {
     "topic_id": 4,
+    "topic_name": "Remote Assistance & Field Service",
     "terms": [
       "technician",
       "use",
