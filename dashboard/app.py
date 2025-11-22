@@ -446,7 +446,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
     <div class="quote-box">
-        <strong>📚 Azeem Azhar's Vision</strong><br/>
+        <strong>📚 Azeem's Vision</strong><br/>
         <em>"The exponential age demands that businesses adopt technologies that
         fundamentally reshape operations, not just incrementally improve them."</em>
     </div>
@@ -455,7 +455,7 @@ with col1:
 with col2:
     st.markdown("""
     <div class="quote-box">
-        <strong>🤖 Ananya Srivastava's Framework</strong><br/>
+        <strong>🤖 Ananya's Framework</strong><br/>
         <em>"AI-native enterprises must evaluate technologies through multiple lenses:
         maturity, compatibility, scalability, and strategic alignment."</em>
     </div>

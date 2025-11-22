@@ -121,7 +121,7 @@ DIMENSION_3_SCALABILITY = DimensionConfig(
     entry_count=600,
     readiness_score=85,
     readiness_color="🟢",
-    key_finding="Infrastructure ready with 5G/edge computing (145 verified sources), cloud rendering enables scale"
+    key_finding="Infrastructure ready with 5G/edge computing (136 verified sources), cloud rendering enables scale"
 )
 
 # ============================================================================
