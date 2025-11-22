@@ -242,54 +242,55 @@ if text and len(text.strip()) > 100:
     st.markdown("---")
     st.markdown("### 🎯 Topic Modeling (LDA)")
     try:
-        if topics_file.exists():
-            # Load pre-computed topic distribution
-            lda_df = pd.read_csv(topics_file)
+        # Load topic keywords from CSV
+        topics_keywords_file = analytics_path / "XR_Scalability_Topics.csv"
+
+        if topics_keywords_file.exists():
+            # Load pre-computed topics with keywords
+            topics_df = pd.read_csv(topics_keywords_file)
 
             st.markdown("**Infrastructure Layer Topics:**")
             st.markdown("")
 
-            # Display topic distribution summary
-            topic_cols = [col for col in lda_df.columns if col.startswith('Topic_')]
-            if topic_cols:
-                # Calculate average distribution across all documents
-                topic_avgs = {}
-                for col in topic_cols:
-                    topic_avgs[col] = lda_df[col].mean()
+            # Display topics with keywords (like other dimensions)
+            for idx, row in topics_df.iterrows():
+                topic_name = row['topic']
+                keywords = row['keywords']
 
-                # Create topic boxes with distribution
-                topic_names = {
-                    'Topic_1': '5G/6G Connectivity & Network',
-                    'Topic_2': 'Edge Computing & Processing',
-                    'Topic_3': 'Cloud Rendering & Streaming'
-                }
+                # Create colored topic boxes with keywords
+                st.markdown(f"""
+                <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                            padding: 15px; border-radius: 8px; border-left: 4px solid {COLORS['accent_teal']};
+                            margin: 10px 0;'>
+                    <h4 style='margin: 0 0 8px 0; color: {COLORS["primary_blue"]};'>
+                        🔸 {topic_name}
+                    </h4>
+                    <p style='margin: 0; color: #1a1a1a; font-size: 0.95em;'>
+                        <strong>Keywords:</strong> {keywords}
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
 
-                for i, (topic_col, avg_prob) in enumerate(sorted(topic_avgs.items(), key=lambda x: x[1], reverse=True)[:3], 1):
-                    topic_name = topic_names.get(topic_col, f"Infrastructure Theme {i}")
-                    prob_pct = avg_prob * 100
+            # Optionally show topic distribution details
+            if topics_file.exists():
+                with st.expander("📊 View Topic Distribution Across Documents"):
+                    lda_df = pd.read_csv(topics_file)
+                    topic_cols = [col for col in lda_df.columns if col.startswith('Topic_')]
+                    if topic_cols:
+                        # Calculate average distribution
+                        topic_avgs = {col: lda_df[col].mean() for col in topic_cols}
+                        st.markdown("**Average Topic Distribution:**")
+                        for col, avg in sorted(topic_avgs.items(), key=lambda x: x[1], reverse=True):
+                            st.markdown(f"- {col}: {avg*100:.1f}% average coverage")
 
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-                                padding: 15px; border-radius: 8px; border-left: 4px solid {COLORS['accent_teal']};
-                                margin: 10px 0;'>
-                        <h4 style='margin: 0 0 8px 0; color: {COLORS["primary_blue"]};'>
-                            🔸 {topic_name}
-                        </h4>
-                        <p style='margin: 0; color: #1a1a1a; font-size: 0.95em;'>
-                            <strong>Document Coverage:</strong> {prob_pct:.1f}% average
-                        </p>
-                    </div>
-                    """, unsafe_allow_html=True)
-
-                # Show distribution table
-                with st.expander("📊 View Topic Distribution Details"):
-                    st.dataframe(
-                        lda_df[topic_cols].head(20),
-                        use_container_width=True,
-                        column_config={col: st.column_config.NumberColumn(col, format="%.3f") for col in topic_cols}
-                    )
+                        st.markdown("")
+                        st.dataframe(
+                            lda_df[topic_cols].head(20),
+                            use_container_width=True,
+                            column_config={col: st.column_config.NumberColumn(col, format="%.3f") for col in topic_cols}
+                        )
         else:
-            st.info("Pre-computed topic modeling not available.")
+            st.info("Pre-computed topic keywords not available. Run generate_scalability_topic_keywords.py to create them.")
     except Exception as e:
         st.warning(f"Topic modeling display failed: {e}")
 

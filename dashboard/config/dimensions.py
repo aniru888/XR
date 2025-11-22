@@ -55,17 +55,17 @@ DIMENSION_1_MATURITY = DimensionConfig(
     question="Where does XR stand on the adoption curve—lab prototype, enterprise pilot, or mainstream deployment?",
     data_files=[
         Path("xr_present_state_maturity_outputs/XR_present_state_corpus.txt"),
-        Path("xr_present_state_maturity_outputs/XR_present_state_VERBATIM_raw.txt"),
+        Path("xr_present_state_maturity_outputs/XR_present_state_VERBATIM_raw_EXPANDED.txt"),
         Path("xr_present_state_maturity_outputs/xr_sentences_sentiment.csv"),
         Path("xr_present_state_maturity_outputs/xr_topics.csv"),
     ],
     source_files=[
-        # Text-based sources, no explicit URL file
+        Path("xr_present_state_maturity_outputs/XR_Present_State_Maturity_LINKS_VERIFIED.txt"),
     ],
-    entry_count=39,
+    entry_count=157,
     readiness_score=75,
     readiness_color="🟡",
-    key_finding="Enterprise pilot stage with established vendors (Meta Quest 3, Vision Pro), but mainstream adoption pending"
+    key_finding="Market transitioning from pilot to scale (17 verified sources): 70% positive sentiment, enterprise adoption accelerating despite hardware/content barriers"
 )
 
 # ============================================================================
@@ -214,10 +214,10 @@ ANALYTICAL_FRAMEWORK = {
         }
     ],
     "data_quality": {
-        "total_verified_urls": 290,
+        "total_verified_urls": 268,
         "verification_status": "All URLs tested: 200 OK (no 404 errors)",
         "publication_period": "2023-2025",
-        "source_types": "Technical blogs, research papers, professional networks, policy briefs, social media"
+        "source_types": "Market research reports, technical blogs, research papers, professional networks, policy briefs, social media"
     }
 }
 
@@ -279,7 +279,7 @@ def get_data_summary() -> Dict:
     return {
         "total_dimensions": len(ALL_DIMENSIONS),
         "total_entries": sum(dim.entry_count for dim in ALL_DIMENSIONS),
-        "total_verified_urls": 290,
+        "total_verified_urls": 268,
         "dimensions": [
             {
                 "name": dim.name,
