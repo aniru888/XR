@@ -145,42 +145,88 @@ example_text = st.text_area(
 
 if example_text:
     try:
-        from textblob import TextBlob
-        sentiment_score = TextBlob(example_text).sentiment.polarity
+        # Use VADER (not TextBlob) to match the explanation
+        try:
+            from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+            sia = SentimentIntensityAnalyzer()
+            scores = sia.polarity_scores(example_text)
+            vader_available = True
+        except ImportError:
+            # Fallback to basic implementation if VADER not available
+            vader_available = False
+            scores = {'compound': 0.0, 'pos': 0.0, 'neu': 1.0, 'neg': 0.0}
 
-        col1, col2, col3 = st.columns(3)
+        if vader_available:
+            compound_score = scores['compound']
 
-        with col1:
-            st.metric(
-                "Sentiment Score",
-                f"{sentiment_score:.3f}",
-                help="Range: -1 (very negative) to +1 (very positive)"
-            )
+            # Display all VADER scores
+            col1, col2, col3, col4 = st.columns(4)
 
-        with col2:
-            if sentiment_score > 0.1:
-                label = "Positive"
-                color = "green"
-                emoji = "😊"
-            elif sentiment_score < -0.1:
-                label = "Negative"
-                color = "red"
-                emoji = "😟"
-            else:
-                label = "Neutral"
-                color = "blue"
-                emoji = "😐"
+            with col1:
+                st.metric(
+                    "Compound Score",
+                    f"{compound_score:.3f}",
+                    help="Overall sentiment: -1 (very negative) to +1 (very positive)"
+                )
 
-            st.markdown(f"### :{color}[{emoji} {label}]")
+            with col2:
+                st.metric(
+                    "Positive",
+                    f"{scores['pos']:.3f}",
+                    help="Proportion of positive words"
+                )
 
-        with col3:
-            threshold = '≥ 0.1' if sentiment_score > 0.1 else '≤ -0.1' if sentiment_score < -0.1 else 'between -0.1 and 0.1'
-            st.markdown(f"**Reasoning:**")
-            st.markdown(f"Score {sentiment_score:.3f} is {threshold}")
+            with col3:
+                st.metric(
+                    "Neutral",
+                    f"{scores['neu']:.3f}",
+                    help="Proportion of neutral words"
+                )
+
+            with col4:
+                st.metric(
+                    "Negative",
+                    f"{scores['neg']:.3f}",
+                    help="Proportion of negative words"
+                )
+
+            # Classification based on VADER thresholds
+            st.markdown("---")
+            col_a, col_b = st.columns(2)
+
+            with col_a:
+                if compound_score >= 0.05:
+                    label = "Positive"
+                    color = "green"
+                    emoji = "😊"
+                elif compound_score <= -0.05:
+                    label = "Negative"
+                    color = "red"
+                    emoji = "😟"
+                else:
+                    label = "Neutral"
+                    color = "blue"
+                    emoji = "😐"
+
+                st.markdown(f"### :{color}[{emoji} {label}]")
+
+            with col_b:
+                if compound_score >= 0.05:
+                    threshold = '≥ 0.05 (VADER positive threshold)'
+                elif compound_score <= -0.05:
+                    threshold = '≤ -0.05 (VADER negative threshold)'
+                else:
+                    threshold = 'between -0.05 and 0.05 (neutral range)'
+
+                st.markdown(f"**Classification Reasoning:**")
+                st.markdown(f"Compound score **{compound_score:.3f}** is {threshold}")
+        else:
+            st.warning("⚠️ VADER library not installed. Install with: `pip install vaderSentiment`")
+            st.info("The demo requires VADER to show accurate sentiment analysis as described above.")
 
     except Exception as e:
         st.error(f"Error analyzing sentiment: {e}")
-        st.info("Make sure TextBlob is installed: `pip install textblob`")
+        st.info("Make sure vaderSentiment is installed: `pip install vaderSentiment`")
 
 # ============================================================================
 # MATHEMATICAL FOUNDATION
